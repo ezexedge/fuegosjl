@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Funda FUEGOS para Asador - Fuegos JL</title>
+<!-- Tailwind CSS v3 with Forms Plugin -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandGold: '#dfbe6f',
+            brandDarkGold: '#c9a44c',
+            brandFooter: '#ebd89f',
+            brandFooterBorder: '#dfcb8a',
+            brandTextMuted: '#666666',
+          },
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+            sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Fonts for Icons & Serif Aesthetics -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style data-purpose="custom-layout">
+    /* iOS smooth scrolling and touch styling */
+    body {
+      -webkit-tap-highlight-color: transparent;
+      overscroll-behavior-y: none;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-white text-neutral-800 font-sans antialiased pb-24">
+<!-- BEGIN: TopAnnouncementBar -->
+<div class="bg-black text-white text-[11px] font-medium py-2 px-3 tracking-wide overflow-x-auto whitespace-nowrap no-scrollbar flex items-center justify-between border-b border-neutral-800" data-purpose="top-ticker">
+<div class="flex items-center space-x-4 mx-auto animate-pulse">
+<span class="flex items-center"><i class="fa-solid fa-credit-card mr-1.5 text-xs text-brandGold"></i> 10% OFF CON TRANSFERENCIA</span>
+<span class="text-neutral-500">•</span>
+<span class="flex items-center"><i class="fa-solid fa-truck-fast mr-1.5 text-xs text-brandGold"></i> ENVÍOS A TODO EL PAÍS</span>
+<span class="text-neutral-500">•</span>
+<span class="flex items-center"><i class="fa-solid fa-bag-shopping mr-1.5 text-xs text-brandGold"></i> 6 CUOTAS SIN INTERÉS</span>
+</div>
+</div>
+<!-- END: TopAnnouncementBar -->
+<!-- BEGIN: MobileHeader -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-neutral-100 px-4 py-2 flex items-center justify-between" data-purpose="mobile-header">
+<!-- Left Navigation: Hamburger Menu -->
+<div class="flex items-center space-x-3 w-1/4">
+<button aria-label="Abrir menú" class="p-1.5 text-neutral-800 hover:text-black" type="button">
+<i class="fa-solid fa-bars text-xl"></i>
+</button>
+<button aria-label="Buscar" class="p-1.5 text-neutral-800 hover:text-black" type="button">
+<i class="fa-solid fa-magnifying-glass text-lg"></i>
+</button>
+</div>
+<!-- Center: Brand Logo -->
+<div class="flex-1 flex justify-center items-center">
+<a class="block py-1" href="#">
+<img alt="Fuegos JL Logo" class="h-12 w-auto object-contain mx-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKpvmMEbdPfFHH2sRNfx84TYlkSbloNbjP-aL9XcMnPJFpg5WPbq8LVJ2yq3WZ0xhWTnXl8nzF3nUElUDqj3ZgecbbZ5AIo-hITIZbJk1zJXFZ_HyCFWLWQ6_6jYxcPdrHiGcygMTD-T8-TxbNB5z9jfeETbCCQa_07G9A4cWL2n9GvA5P832iC0YCoBiU4uJPVve7jQK9bTR6LpWT8tkLj4lipF9tP_aHO9siPkxd-rFf1WWsPAFRMg"/>
+</a>
+</div>
+<!-- Right: Account & Cart -->
+<div class="flex items-center justify-end space-x-3 w-1/4">
+<button aria-label="Mi Cuenta" class="p-1.5 text-neutral-800 hover:text-black" type="button">
+<i class="fa-regular fa-user text-lg"></i>
+</button>
+<button aria-label="Carrito de compras" class="p-1.5 text-neutral-800 hover:text-black relative" type="button">
+<i class="fa-solid fa-bag-shopping text-xl"></i>
+<span class="absolute -top-1 -right-1 bg-neutral-900 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+</button>
+</div>
+</header>
+<!-- END: MobileHeader -->
+<!-- BEGIN: Breadcrumb -->
+<nav aria-label="Breadcrumb" class="px-4 py-2.5 text-xs text-neutral-500 bg-neutral-50/60 border-b border-neutral-100 overflow-x-auto whitespace-nowrap no-scrollbar">
+<ol class="inline-flex items-center space-x-1.5">
+<li><a class="hover:text-black" href="#">Inicio</a></li>
+<li><span class="text-neutral-300">/</span></li>
+<li><a class="hover:text-black" href="#">Accesorios</a></li>
+<li><span class="text-neutral-300">/</span></li>
+<li aria-current="page" class="font-medium text-neutral-800 truncate">Funda FUEGOS para Asador</li>
+</ol>
+</nav>
+<!-- END: Breadcrumb -->
+<main class="w-full">
+<!-- BEGIN: ProductGallery -->
+<section class="relative bg-neutral-50 pt-3 pb-6 border-b border-neutral-100" data-purpose="product-image-viewer">
+<!-- Main Image View -->
+<div class="relative w-full aspect-square px-4 flex items-center justify-center">
+<!-- Main Product Graphic Display -->
+<div class="relative w-full h-full flex items-center justify-center overflow-hidden rounded-xl">
+<img alt="Funda FUEGOS para Asador instalada en asador con ruedas de hierro" class="object-contain w-full h-full max-h-[360px] drop-shadow-md transition-opacity duration-300" id="mainProductImg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNfBhfLGWN8QJ5RQk6cb47z9RNISZHRzlMHasoD43E54BUJ2sOQmTc5FO_qYzVqNRxrxI5Tg0HhTHLp8p8us5AmTrF6TNfl-H0gDxlFLXUsVk3XwLsbdjrE_gdOCPU8aD5NVTx6QgxY0IF5zjN-WSgEP3RPJAn3fZtfo1nwNnrbicr-kaQqephjYelGO1i1n7VXF6FeCAEWOSYFga3uOZXmNb-u6ZY5fszP8DJuuKYbTUw-ROTSlaYUQ"/>
+<span class="absolute top-2 right-2 bg-neutral-900/80 backdrop-blur-sm text-white text-[10px] font-medium tracking-wider uppercase px-2 py-0.5 rounded">
+            Exclusivo
+          </span>
+</div>
+</div>
+<!-- Thumbnail Carousel Selector -->
+<div class="flex items-center justify-center space-x-2.5 px-4 mt-3">
+<button class="w-12 h-12 rounded-lg border-2 border-neutral-900 overflow-hidden bg-white p-0.5 shadow-sm focus:outline-none">
+<img alt="Miniatura 1" class="w-full h-full object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqIKTroQvtE_lzdDicfWoUT2EwqbMoZHikR5fdDrCXjV565dy3qenIkBlvO1YUouCTfsp3dO7b8sODedRAtG3cuTPafZ4-TxsdoH3X2CAuvtSUbFEISwpvfXAiWm0wKc4uZvnDbzQAMKq34LTMmqhN8P_6NHbgciryEi3MWv4L3Pj-JfSPa1yGaSZtXfzutqVSjHPNpLG6QEIKax0YFaUp1PkSJp8HaelVm0WdAvo2dnEduAEzIt203A"/>
+</button>
+<button class="w-12 h-12 rounded-lg border border-neutral-200 overflow-hidden bg-white p-0.5 opacity-70 hover:opacity-100 focus:outline-none">
+<img alt="Miniatura 2" class="w-full h-full object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASs7Sd-Li2uBSiNamtDOOxnWvGUGH2TSvYDm-wfe_7OfxWllOMHi7zaGZDcFtJlicV-3l1fzDOL6Fb4W6CeYoZNqiv6D7nf2TPzE16LIizdNQTMUVqMqOAplmXr8IxvXnN6Xydx75Okf-kHmWHvu_dPXCSIo8QB8UNwM7ADG3CAxXTDsZL02IuvLj_oqcV2Cfq-ruqfW6y-zc9PDIDQESKElTKn5Tfu2M7lg-zdd13lXQGzdKwh15DSw"/>
+</button>
+<button class="w-12 h-12 rounded-lg border border-neutral-200 overflow-hidden bg-white p-0.5 opacity-70 hover:opacity-100 focus:outline-none">
+<img alt="Miniatura 3" class="w-full h-full object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC34wcIvBBXLzt6W_DbVvkV-Z9b1Mb-Ys6ZN_ZEjA1FhRVo8m7JpAKfWq7DEAXAdqRGbet3sR-EgkxrRKYDgbdlX_IceVcud2dxDtnyuJtZjJ8j9BynCwHMiPcal6fQ9E8O4mjVWhQXRoqZCGOmPwvorkZLSQKCgpw8Ly7Fxp7tBUeJtDe0_qrl3bU5joLGE6WMUh5j22aP-3VJKRHZJ_-dVWxk2Vjmv4PysMkmbC4ueVo4TfyW5zKmow"/>
+</button>
+<button class="w-12 h-12 rounded-lg border border-neutral-200 overflow-hidden bg-white p-0.5 opacity-70 hover:opacity-100 focus:outline-none">
+<img alt="Miniatura 4" class="w-full h-full object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGMD10FdWSqx3H1zUWadiI0BmBKrJVLUNvjh7AZDPkSTIzMoUL-nkysQD6Elny7pBOEyrIXntGbplOxGx34NC0o6H-wC63EYQU3iiJ7a2m6XKp1XL_GQx37QMYMCG1i97IFH8onUhUVq3pMAhMQcPVrLq-7TNYVQl29N6FrM9T5KP3Z_TJVbHEi6UwEkMGPGcvEZUhHOkBl0eKE6qU8AITxzQoNmus-2ZYw7AkJAkmaYOeB3NiXYuQJQ"/>
+</button>
+</div>
+</section>
+<!-- END: ProductGallery -->
+<!-- BEGIN: ProductPurchaseDetails -->
+<section class="p-5 space-y-5" data-purpose="product-meta">
+<!-- Title & Price Block -->
+<div class="border-b border-neutral-100 pb-4">
+<h1 class="text-2xl font-serif text-neutral-900 font-normal tracking-tight mb-2">Funda FUEGOS para Asador</h1>
+<!-- Standard Price -->
+<div class="text-2xl font-bold text-neutral-900 tracking-tight">
+          $179.400,00
+        </div>
+<!-- Transfer Discount Price -->
+<div class="mt-2 text-sm text-brandDarkGold font-medium bg-amber-50/80 border border-amber-200/60 rounded-md p-2.5">
+<div class="text-base font-bold text-neutral-900">$161.460,00</div>
+<p class="text-xs text-amber-900 mt-0.5">
+<span class="font-semibold text-emerald-700">10% de descuento</span> pagando con Transferencia o depósito bancario
+          </p>
+</div>
+<!-- Installments Breakdown -->
+<div class="mt-2.5 flex items-center justify-between text-xs text-amber-800">
+<span class="font-medium">6 cuotas sin interés de $29.900,00</span>
+<button class="underline font-semibold hover:text-black">Ver detalles</button>
+</div>
+</div>
+<!-- Model Selection -->
+<div class="space-y-2.5" data-purpose="variant-selector">
+<div class="flex items-center justify-between">
+<label class="text-xs font-semibold uppercase tracking-wider text-neutral-700">
+            Modelo de Asador: <span class="font-bold text-neutral-900 ml-1">Floki / Odin</span>
+</label>
+</div>
+<!-- Model Options Chips (Scrollable and wrap-responsive) -->
+<div class="flex flex-wrap gap-2 text-xs">
+<!-- Active model chip -->
+<button class="border-2 border-neutral-900 bg-neutral-900 text-white font-medium px-3.5 py-2 rounded-lg shadow-sm">
+            Floki / Odin
+          </button>
+<button class="border border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500 px-3.5 py-2 rounded-lg">
+            Parrilla Qatar
+          </button>
+<button class="border border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500 px-3.5 py-2 rounded-lg">
+            Ragnar 100/120
+          </button>
+<button class="border border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500 px-3.5 py-2 rounded-lg">
+            Ragnar 80
+          </button>
+<button class="border border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500 px-3.5 py-2 rounded-lg">
+            Bjorn 120
+          </button>
+<button class="border border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500 px-3.5 py-2 rounded-lg">
+            Bjorn 100
+          </button>
+<button class="border border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500 px-3.5 py-2 rounded-lg">
+            Bjorn 80
+          </button>
+<button class="border border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500 px-3.5 py-2 rounded-lg">
+            Rollo
+          </button>
+</div>
+</div>
+<!-- Urgency Banner -->
+<div class="text-sm font-semibold text-amber-600 flex items-center space-x-1.5">
+<i class="fa-solid fa-fire text-amber-500"></i>
+<span>¡No te lo pierdas, es el último!</span>
+</div>
+<!-- Quantity and Inline Cart Action -->
+<div class="space-y-3 pt-1">
+<div class="flex items-center space-x-3">
+<!-- Counter Controls -->
+<div class="flex items-center border border-neutral-300 rounded-lg overflow-hidden bg-white shadow-sm">
+<button class="px-3.5 py-2.5 text-neutral-600 hover:bg-neutral-100 text-sm font-bold active:scale-95 transition">-</button>
+<input class="w-10 text-center border-0 p-0 text-sm font-bold text-neutral-800 focus:ring-0" max="1" min="1" readonly="" type="number" value="1"/>
+<button class="px-3.5 py-2.5 text-neutral-400 bg-neutral-50 text-sm font-bold cursor-not-allowed">+</button>
+</div>
+<!-- Stock status -->
+<span class="text-xs text-neutral-500">1 en stock</span>
+</div>
+<!-- Add To Cart Primary Action Button -->
+<button class="w-full bg-brandGold hover:bg-brandDarkGold text-neutral-900 font-semibold py-3.5 px-6 rounded-lg text-sm tracking-wide uppercase shadow-md transition-all active:scale-[0.98] flex items-center justify-center space-x-2" type="button">
+<i class="fa-solid fa-bag-shopping"></i>
+<span>Agregar al carrito</span>
+</button>
+</div>
+<!-- Description Teaser -->
+<div class="border-t border-neutral-100 pt-4 text-center">
+<p class="text-sm font-medium text-neutral-800 italic">
+          "Cuidá tu asador con nuestras fundas especiales."
+        </p>
+</div>
+<!-- Social Share Buttons -->
+<div class="flex items-center justify-center space-x-5 pt-1 text-neutral-600 text-lg">
+<a aria-label="Compartir en Facebook" class="hover:text-blue-600 transition" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a aria-label="Compartir en X (Twitter)" class="hover:text-black transition" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+<a aria-label="Compartir en Pinterest" class="hover:text-red-600 transition" href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+<a aria-label="Compartir en WhatsApp" class="hover:text-green-600 transition" href="#"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+</section>
+<!-- END: ProductPurchaseDetails -->
+<!-- BEGIN: SimilarProducts -->
+<section class="py-8 bg-neutral-50/70 border-t border-neutral-200 mt-6" data-purpose="similar-products">
+<div class="px-4 mb-5">
+<h2 class="text-xl font-serif text-center text-neutral-900">Productos similares</h2>
+<div class="w-10 h-0.5 bg-brandGold mx-auto mt-2"></div>
+</div>
+<!-- 2-Column Responsive Mobile Product Grid -->
+<div class="grid grid-cols-2 gap-3 px-3">
+<!-- Item 1: Cruz Libro -->
+<div class="bg-white p-3 rounded-lg border border-neutral-200 shadow-sm flex flex-col justify-between">
+<div class="aspect-square w-full mb-2 overflow-hidden flex items-center justify-center bg-neutral-100/50 rounded">
+<img alt="Cruz Libro" class="object-contain max-h-36" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7qVpP18P2JENu1sT7oE2ExtNUvCKtxt6XPM-KgG4CSnwPBp4yQDebbmsEluI3YOYJrs5v0jxPCJseOgctysBN4iVHBXKUhvPDVpxfdjpQFnAqSVnMkujsWvl0mEfmnjEpeJAPXU0AIIzd6FvkfkB8sldxCkYdrphhg_Jfb1iyIkFN4QiJeAQUMu_lLDJSopBfNMRpImAqFZioKRVwXhZGRbnxxZuZmvhi_rKMrhpr7uo6UKByfUW_Aw"/>
+</div>
+<div class="text-center flex flex-col justify-between flex-grow">
+<h3 class="text-xs font-serif font-medium text-neutral-800 line-clamp-1 mb-1">Cruz Libro</h3>
+<div class="text-xs font-bold text-neutral-900">$115.200,00</div>
+<p class="text-[10px] text-brandDarkGold mt-1 leading-tight">
+              $103.680,00 con Transferencia
+            </p>
+</div>
+</div>
+<!-- Item 2: Atizador y Avivador -->
+<div class="bg-white p-3 rounded-lg border border-neutral-200 shadow-sm flex flex-col justify-between">
+<div class="aspect-square w-full mb-2 overflow-hidden flex items-center justify-center bg-neutral-100/50 rounded">
+<img alt="Atizador y Avivador Fuegos JL" class="object-contain max-h-36" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhV9l4Mjy6w25yDY8jHGS_aONzKvbD0isQMfKg1lE3hxpqxBZQQrp6vMnR-ZZg5n-aqGOM3l1IgKV1zWyWPQIUeenLbQUJ17FSErmytZfkzOaVnj54srWfGoX2j2NLsKWW5P9fwxYbo4zRmFHoKBw7OUtQSuKDBu1LNqKsaghQtRWP8aSjb3d_t8VfjH7Y8_7iPU6TdlHCcIKshMUe61Txl_rupTP10jEWrDBLzaHoIsWHTBIXb-a2SQ"/>
+</div>
+<div class="text-center flex flex-col justify-between flex-grow">
+<h3 class="text-xs font-serif font-medium text-neutral-800 line-clamp-1 mb-1">Atizador y Avivador Fuegos JL</h3>
+<div class="text-xs font-bold text-neutral-900">$19.500,00</div>
+<p class="text-[10px] text-brandDarkGold mt-1 leading-tight">
+              $17.550,00 con Transferencia
+            </p>
+</div>
+</div>
+<!-- Item 3: Jaula Oval -->
+<div class="bg-white p-3 rounded-lg border border-neutral-200 shadow-sm flex flex-col justify-between">
+<div class="aspect-square w-full mb-2 overflow-hidden flex items-center justify-center bg-neutral-100/50 rounded">
+<img alt="Jaula Oval" class="object-contain max-h-36" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA55CtgxOKYMir8LfBCeiweetzeCAMB4Evt-43-wKXsRMn5Z04B4EiW30LuGCXDuG7GglIyNUp63Lypb7gSMBYip-1E9Kc55ZEmZrf7mGqP0ASv5vAKc6ifIsvuYumJldCWh_6jf4IELg023SkoX2NLG5l5o8l8XF14zxt4s9trjHtayma3kYr6Zjj-aCWwatLhDiGc2RL_u0BtdHtVCLoTvKp0yOCre70IKpHoDK7PM5IJNWFineupNw"/>
+</div>
+<div class="text-center flex flex-col justify-between flex-grow">
+<h3 class="text-xs font-serif font-medium text-neutral-800 line-clamp-1 mb-1">Jaula Oval</h3>
+<div class="text-xs font-bold text-neutral-900">$29.200,00</div>
+<p class="text-[10px] text-brandDarkGold mt-1 leading-tight">
+              $26.280,00 con Transferencia
+            </p>
+</div>
+</div>
+<!-- Item 4: Accesorio Parrilla -->
+<div class="bg-white p-3 rounded-lg border border-neutral-200 shadow-sm flex flex-col justify-between">
+<div class="aspect-square w-full mb-2 overflow-hidden flex items-center justify-center bg-neutral-100/50 rounded">
+<img alt="Accesorio Parrilla" class="object-contain max-h-36" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRH1XneRbsCMf3okPSxPbslWfpvA4eItbC7HrNPp5s6L2ez6i9Q9MlR4rgWEEotYYzclJxyxDo1WWVLzgmMSoMZYZZKWA65XOwE5IPHKbqdkOxd7HuEfXXEX00WDtcIK4FF54d-M7OY8uj2VsH40D1vpKHXWKuKnMbZ-oHrzEKJAuM4ROOM5Wn1gO3aZOODErdm16p_MfWuGUJF3QJdLVr-9j--Bq5jBWXygLEBP6Q57LaofTNSO-Dtw"/>
+</div>
+<div class="text-center flex flex-col justify-between flex-grow">
+<h3 class="text-xs font-serif font-medium text-neutral-800 line-clamp-1 mb-1">Accesorio Parrilla</h3>
+<div class="text-xs font-bold text-neutral-900">$77.700,00</div>
+<p class="text-[10px] text-brandDarkGold mt-1 leading-tight">
+              $69.930,00 con Transferencia
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: SimilarProducts -->
+</main>
+<!-- BEGIN: MobileFooter -->
+<footer class="bg-brandFooter text-neutral-900 pt-8 pb-10 px-5 text-center border-t border-brandFooterBorder space-y-6" data-purpose="mobile-footer">
+<!-- Emblem Logo -->
+<div class="flex justify-center">
+<img alt="Fuegos JL Emblema" class="h-14 w-auto brightness-90 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7FBlhIHfooxK2XUXM5-jbstUG79ZyQQQC7-lOxFtdCAq_M7_6Iftyct5NXA3_3cwk1n9o_HPC5NmvdiVEAU9I32n0uPZleT4joLLeaSie8C6D2bd_DUy7_TPHdCcJY4jP-4dvcAvPIa9Xc1DdCE1SSBMZAdtTx9reTm7vEmQk0t-JlsAUn4IkgFc7GYxTFevbA161tTf3zARu7iMsTrkD-GMoIOTYzJPUCdm7gfa5WEn4ccLJVyrz2Q"/>
+</div>
+<!-- Social Links -->
+<div class="flex justify-center space-x-6 text-xl text-neutral-800">
+<a aria-label="Instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
+<a aria-label="Facebook" href="#"><i class="fa-brands fa-facebook"></i></a>
+<a aria-label="YouTube" href="#"><i class="fa-brands fa-youtube"></i></a>
+<a aria-label="TikTok" href="#"><i class="fa-brands fa-tiktok"></i></a>
+</div>
+<!-- Navigation Links -->
+<nav class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs font-medium text-neutral-800">
+<a href="#">Inicio</a>
+<a href="#">Productos</a>
+<a href="#">Contacto</a>
+<a href="#">Resto del mundo</a>
+<a href="#">Quiénes Somos</a>
+</nav>
+<!-- Newsletter Subscription Form -->
+<div class="max-w-sm mx-auto w-full pt-1">
+<form class="flex items-stretch border border-neutral-700/40 rounded overflow-hidden bg-white/50 backdrop-blur-sm shadow-inner" onsubmit="event.preventDefault()">
+<input class="w-full bg-transparent border-0 px-3 py-2 text-xs text-neutral-900 placeholder-neutral-600 focus:ring-0" placeholder="Suscribite al newsletter..." required="" type="email"/>
+<button class="bg-neutral-800 text-white text-xs font-semibold px-4 hover:bg-black transition-colors" type="submit">
+          Enviar
+        </button>
+</form>
+</div>
+<!-- Contact Details -->
+<div class="text-xs text-neutral-800 space-y-1">
+<p class="font-medium">5491167422899</p>
+<p>+54 9 11 6742-2899</p>
+<p><a class="underline" href="mailto:info@fuegosjl.com">info@fuegosjl.com</a></p>
+<p>Abdón Calderón 1089</p>
+</div>
+<!-- Payment Badges Strip -->
+<div class="pt-2">
+<div class="flex flex-wrap justify-center items-center gap-1.5 opacity-80 max-w-xs mx-auto">
+<span class="bg-white px-1.5 py-0.5 rounded text-[10px] font-bold border border-neutral-300">VISA</span>
+<span class="bg-white px-1.5 py-0.5 rounded text-[10px] font-bold border border-neutral-300">Mastercard</span>
+<span class="bg-white px-1.5 py-0.5 rounded text-[10px] font-bold border border-neutral-300">AMEX</span>
+<span class="bg-white px-1.5 py-0.5 rounded text-[10px] font-bold border border-neutral-300">Banelco</span>
+<span class="bg-white px-1.5 py-0.5 rounded text-[10px] font-bold border border-neutral-300">Cabal</span>
+<span class="bg-white px-1.5 py-0.5 rounded text-[10px] font-bold border border-neutral-300">Naranja</span>
+<span class="bg-white px-1.5 py-0.5 rounded text-[10px] font-bold border border-neutral-300">PagoFácil</span>
+<span class="bg-white px-1.5 py-0.5 rounded text-[10px] font-bold border border-neutral-300">RapiPago</span>
+</div>
+</div>
+<!-- Legal & Attribution Notice -->
+<div class="text-[10px] text-neutral-700 space-y-2 pt-2 border-t border-neutral-400/30">
+<p class="font-semibold text-neutral-800">Creado con <strong>Tiendanube</strong></p>
+<p>Copyright Fuegos JL - 30716772701 - 2026. Todos los derechos reservados.</p>
+<p class="leading-relaxed">
+        Defensa de las y los consumidores. Para reclamos <a class="underline" href="#">ingresá acá</a> / <a class="underline font-medium" href="#">Botón de arrepentimiento</a>
+</p>
+</div>
+</footer>
+<!-- END: MobileFooter -->
+<!-- BEGIN: StickyBottomBar -->
+<!-- Fixed sticky purchase prompt for mobile convenience -->
+<aside class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-neutral-200 px-4 py-2.5 flex items-center justify-between shadow-lg" data-purpose="sticky-cta-bar">
+<div class="flex flex-col">
+<span class="text-[11px] text-neutral-500 line-through leading-none">$179.400</span>
+<span class="text-base font-bold text-neutral-900 leading-tight">$161.460</span>
+<span class="text-[9px] text-emerald-700 font-semibold uppercase">10% OFF transf.</span>
+</div>
+<button class="bg-brandGold active:bg-brandDarkGold text-neutral-900 text-xs font-bold uppercase tracking-wider py-2.5 px-6 rounded-lg shadow flex items-center space-x-2" type="button">
+<i class="fa-solid fa-cart-shopping"></i>
+<span>Comprar</span>
+</button>
+</aside>
+<!-- END: StickyBottomBar -->
+<!-- BEGIN: FloatingWhatsAppButton -->
+<a aria-label="Contactar por WhatsApp" class="fixed bottom-16 right-4 z-40 bg-[#25D366] text-white p-3.5 rounded-full shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center" href="https://wa.me/5491167422899" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-whatsapp text-2xl"></i>
+</a>
+<!-- END: FloatingWhatsAppButton -->
+</body></html>

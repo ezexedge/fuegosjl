@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fuegos JL | Tienda Oficial Mobile</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Montserrat:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-tint": "#e9c176",
+            "on-secondary-fixed-variant": "#7b2e1c",
+            "secondary-fixed-dim": "#ffb4a3",
+            "outline-variant": "#4e4639",
+            "on-tertiary-fixed-variant": "#004a75",
+            "surface-dim": "#141311",
+            "primary": "#e9c176",
+            "surface-container-high": "#2b2a27",
+            "on-primary": "#412d00",
+            "patina-bronze": "#A88344",
+            "surface-container-lowest": "#0f0e0c",
+            "primary-fixed-dim": "#e9c176",
+            "inverse-surface": "#e6e2de",
+            "outline": "#9a8f80",
+            "background": "#141311",
+            "primary-container": "#c5a059",
+            "surface-variant": "#363432",
+            "tertiary": "#97ccfe",
+            "muted-stone": "#9E9589",
+            "surface": "#141311",
+            "tertiary-container": "#75aadb",
+            "ember-glow": "#D9532F",
+            "on-surface-variant": "#d1c5b4",
+            "on-secondary-container": "#ffa089",
+            "secondary-fixed": "#ffdad2",
+            "on-secondary-fixed": "#3d0600",
+            "on-primary-container": "#4e3700",
+            "surface-container-highest": "#363432",
+            "secondary-container": "#7e301e",
+            "tertiary-fixed-dim": "#97ccfe",
+            "error": "#ffb4ab",
+            "on-tertiary": "#003353",
+            "on-primary-fixed-variant": "#5d4201",
+            "qatar-gold": "#D4AF37",
+            "surface-bright": "#3b3936",
+            "surface-container-low": "#1d1b19",
+            "inverse-on-surface": "#32302e",
+            "forge-black": "#0B0A09",
+            "on-tertiary-container": "#003e63",
+            "on-error": "#690005",
+            "secondary": "#ffb4a3",
+            "charcoal-steel": "#1F1D1A",
+            "on-tertiary-fixed": "#001d32",
+            "surface-container": "#211f1d",
+            "on-secondary": "#5d1808",
+            "tertiary-fixed": "#cee5ff",
+            "on-error-container": "#ffdad6",
+            "primary-fixed": "#ffdea5",
+            "error-container": "#93000a",
+            "warm-ivory": "#F4EFEA",
+            "carbon-border": "#2E2B26",
+            "on-surface": "#e6e2de",
+            "inverse-primary": "#775a19",
+            "on-background": "#e6e2de",
+            "on-primary-fixed": "#261900"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "price-catalog": ["Montserrat"],
+            "financing-highlight": ["Montserrat"],
+            "headline-md": ["EB Garamond"],
+            "headline-lg": ["EB Garamond"],
+            "body-lg": ["Montserrat"],
+            "display-hero-mobile": ["EB Garamond"],
+            "headline-lg-mobile": ["EB Garamond"],
+            "display-hero": ["EB Garamond"],
+            "title-editorial": ["EB Garamond"],
+            "body-md": ["Montserrat"],
+            "price-featured": ["Montserrat"],
+            "headline-sm": ["EB Garamond"],
+            "body-sm": ["Montserrat"],
+            "label-caps": ["Montserrat"]
+          },
+          "fontSize": {
+            "price-catalog": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "financing-highlight": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+            "title-editorial": ["18px", { "lineHeight": "24px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "price-featured": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 25s linear infinite;
+    }
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #FFF1D0 0%, #E9C176 50%, #A88344 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-forge-black text-on-surface antialiased overflow-x-hidden selection:bg-primary-container selection:text-forge-black pb-20">
+<!-- 1. Ticker Rotativo de Beneficios -->
+<aside class="relative z-50 bg-forge-black text-on-surface border-b border-carbon-border overflow-hidden py-2 select-none">
+<div class="animate-marquee items-center gap-6 text-label-caps font-label-caps text-muted-stone">
+<div class="flex items-center gap-6 whitespace-nowrap">
+<span>💳 10% OFF PAGANDO CON TRANSFERENCIA</span>
+<span class="text-primary">•</span>
+<span>🛻 ENVÍOS A TODO EL PAÍS</span>
+<span class="text-primary">•</span>
+<span>💰 HASTA 6 CUOTAS SIN INTERÉS</span>
+<span class="text-primary">•</span>
+</div>
+<div aria-hidden="true" class="flex items-center gap-6 whitespace-nowrap">
+<span>💳 10% OFF PAGANDO CON TRANSFERENCIA</span>
+<span class="text-primary">•</span>
+<span>🛻 ENVÍOS A TODO EL PAÍS</span>
+<span class="text-primary">•</span>
+<span>💰 HASTA 6 CUOTAS SIN INTERÉS</span>
+<span class="text-primary">•</span>
+</div>
+</div>
+</aside>
+<!-- 2. Header Mobile -->
+<header class="sticky top-0 z-40 bg-forge-black/90 backdrop-blur-md border-b border-carbon-border shadow-sm px-4 py-3 flex items-center justify-between">
+<button aria-label="Abrir menú" class="p-2 text-primary hover:text-warm-ivory active:scale-95 transition-transform" id="open-drawer-btn">
+<span class="material-symbols-outlined text-[26px]">menu</span>
+</button>
+<a class="flex items-center justify-center -translate-y-0.5" href="#">
+<img alt="Fuegos JL Logo" class="h-10 w-auto object-contain brightness-110 drop-shadow-[0_2px_8px_rgba(233,193,118,0.25)]" src="https://lh3.googleusercontent.com/aida/AEtjO1X6uF22JxbiVuvSj8p2c2lTo6dVKVAy_2Im5dBwY_1oGHe4KgKESwbfhoIG5nwC3XHDBXJTbdQhet4mQpLrIeYSLIWlxp41CyvLItsFazJ050YwPlCTCdHIGUavYn8N9oIv9AtzLm9xsxqsttmO9dMJCwnQSeFZI2znjL0-cTm3PpQwnEP3mwd-nJhYb4BDFqdbhpzu7To4GnK4GsKBNJp5SOsdFftj_NuzBhUnYsnnRZPOcfMqf47suR_s"/>
+</a>
+<button aria-label="Carrito de compras" class="relative p-2 text-primary hover:text-warm-ivory active:scale-95 transition-transform" id="cart-toggle-btn">
+<span class="material-symbols-outlined text-[26px]">shopping_bag</span>
+<span class="absolute top-1 right-1 bg-ember-glow text-warm-ivory text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center font-label-caps ring-1 ring-forge-black">0</span>
+</button>
+</header>
+<!-- Navigation Drawer (Shared Component) -->
+<div class="fixed inset-0 bg-forge-black/80 backdrop-blur-sm z-50 hidden transition-opacity" id="drawer-backdrop"></div>
+<aside class="fixed inset-y-0 left-0 z-50 w-80 max-w-[85vw] flex flex-col bg-surface-container border-r border-carbon-border shadow-2xl -translate-x-full transition-transform duration-300" id="nav-drawer">
+<div class="p-5 flex items-center justify-between border-b border-carbon-border">
+<div class="font-headline-md text-headline-md text-primary tracking-wider">FUEGOS JL</div>
+<button class="text-muted-stone hover:text-primary active:scale-95 transition-transform" id="close-drawer-btn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto py-2">
+<nav class="flex flex-col">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors font-title-editorial text-title-editorial" href="#asadores">
+<span class="material-symbols-outlined text-primary text-[20px]">outdoor_grill</span> Asadores
+        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors font-title-editorial text-title-editorial" href="#parrillas">
+<span class="material-symbols-outlined text-primary text-[20px]">fireplace</span> Parrillas
+        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors font-title-editorial text-title-editorial" href="#fogoneros">
+<span class="material-symbols-outlined text-primary text-[20px]">local_fire_department</span> Fogoneros
+        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors font-title-editorial text-title-editorial" href="#leneros">
+<span class="material-symbols-outlined text-primary text-[20px]">forest</span> Leñeros
+        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors font-title-editorial text-title-editorial" href="#hornos">
+<span class="material-symbols-outlined text-primary text-[20px]">microwave</span> Hornos
+        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors font-title-editorial text-title-editorial" href="#accesorios">
+<span class="material-symbols-outlined text-primary text-[20px]">skillet</span> Accesorios
+        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors font-title-editorial text-title-editorial" href="#cubiertos">
+<span class="material-symbols-outlined text-primary text-[20px]">restaurant</span> Cubiertos
+        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors font-title-editorial text-title-editorial" href="#sartenes">
+<span class="material-symbols-outlined text-primary text-[20px]">cooking</span> Sartenes
+        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors font-title-editorial text-title-editorial" href="#merch">
+<span class="material-symbols-outlined text-primary text-[20px]">checkroom</span> Merch
+        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors font-title-editorial text-title-editorial" href="#gift-card">
+<span class="material-symbols-outlined text-primary text-[20px]">card_giftcard</span> Gift Card
+        </a>
+</nav>
+<div class="mt-6 pt-4 border-t border-carbon-border px-4 space-y-3">
+<a class="block text-body-sm font-body-sm text-muted-stone hover:text-warm-ivory" href="#">Quiénes Somos</a>
+<a class="block text-body-sm font-body-sm text-muted-stone hover:text-warm-ivory" href="#">Contacto y Envíos</a>
+<a class="block text-body-sm font-body-sm text-muted-stone hover:text-warm-ivory" href="#">Resto del Mundo</a>
+</div>
+</div>
+</aside>
+<!-- 3. Hero Principal -->
+<section class="relative w-full">
+<div class="relative w-full aspect-[4/5] max-h-[580px] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A cinematic close-up of artisanal iron Argentine outdoor grill with raw crackling firewood, golden glowing charcoal embers, artisanal chorizo and beef grilling over open flame. Thick dramatic woodsmoke rises into dark atmospheric moody dusk lighting. Rich deep charcoal, warm amber forge fire tones, and rustic culinary luxury craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxVlnX1-o_Tm7rcmAwU_3y17tmy0apL4scV5l3oCsaJIVTcsxmXC7o5tAASIBDKyVIyw5xQjiNkuLRAuIZvWFxyvi23Shs3VezNkRWx5z9iyXDhmnt3Mb_9iR3VhigdtA7fYgEQkZcmTN6PaS3uqKXgHELCP2wNIk4vsaV9pTlRig_M6fhbU7ghCIVKEddXMcs9VFyjSAItCFhXm33Hq5Zn1rCRcEv-RNLFbt5UoanMNPFoSJPeqiKJA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-forge-black via-forge-black/40 to-transparent"></div>
+<div class="absolute inset-0 bg-radial from-transparent via-transparent to-forge-black/70"></div>
+</div>
+<div class="px-5 pt-6 pb-10 text-center relative z-10 -mt-16 bg-gradient-to-b from-transparent via-forge-black to-forge-black">
+<div class="inline-flex items-center justify-center gap-2 mb-3">
+<span class="h-px w-8 bg-primary/60"></span>
+<span class="text-label-caps font-label-caps text-primary tracking-widest uppercase">FUEGOS DE AUTOR</span>
+<span class="h-px w-8 bg-primary/60"></span>
+</div>
+<h1 class="text-display-hero-mobile font-display-hero-mobile text-warm-ivory leading-tight mb-5 italic max-w-sm mx-auto">
+        No vendemos felicidad, pero ésto es lo más parecido.
+      </h1>
+<div>
+<a class="inline-block border border-primary text-primary hover:bg-primary hover:text-forge-black font-label-caps text-label-caps px-8 py-3.5 tracking-widest uppercase transition-all duration-300 active:scale-95 shadow-[0_0_20px_-4px_rgba(233,193,118,0.2)]" href="#destacados">
+          NUESTROS PRODUCTOS
+        </a>
+</div>
+</div>
+</section>
+<!-- 4. Sección Categorías -->
+<section class="px-4 py-8">
+<div class="text-center mb-6">
+<h2 class="text-headline-md font-headline-md text-warm-ivory tracking-wider uppercase">CATEGORÍAS</h2>
+<div class="w-12 h-0.5 bg-primary mx-auto mt-2"></div>
+</div>
+<div class="flex flex-col gap-3.5">
+<!-- Asadores -->
+<a class="group relative block w-full h-44 overflow-hidden rounded border border-carbon-border" href="#" id="asadores">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Heavy gauge rustic industrial steel Argentine asador grill cross mounted on heavy iron wheels outdoors surrounded by neatly stacked cut firewood. Warm golden sunset light glinting on textured steel weld seams with deep forge-black and antique brass tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2adDPyNVn3Y9TIliBpa-Bf2apMp25n_BVu-he5oQOW0A_1vTfLYbvwqQ2U69rIQ2PceQM5VhXFQxf3RuiQ1LM4Z1PJxHaDkTrX78Vr_s9koMrfFXVs9RwJhUzWjk-7f28C2Y6kfHTa9KDdGPPxoxRsg23l297mDygmVTOBbuChzRe3RSDiFXXoqi_wQ16EPmS2ysvTWR-KpFKR2Mf8CnDGI22lMj2DZtBPpoVzYvq4uC5eHFHwiyz8Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-forge-black/90 via-forge-black/40 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-end pb-5 text-center">
+<span class="text-headline-md font-headline-md text-warm-ivory tracking-wider uppercase drop-shadow-md">ASADORES</span>
+<span class="text-body-sm font-body-sm text-primary tracking-widest uppercase mt-0.5 underline decoration-primary/50 underline-offset-4 group-hover:text-warm-ivory transition-colors">Ver</span>
+</div>
+</a>
+<!-- Parrillas -->
+<a class="group relative block w-full h-44 overflow-hidden rounded border border-carbon-border" href="#" id="parrillas">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Handcrafted heavy iron Argentine parrilla with dual elevation crank wheels and heavy-duty steel firebox in an outdoor stone patio with stacked firewood backdrop. Deep carbon blacks, raw metal sheen, and artisan outdoor kitchen craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzlVzX9orWPEXT4t43Wy-P5oXtav7z0a8KKSIjLT23EzvpceRLlmncqDry54gvFqa2D4zs2xAQrEKGEu3-wfF_aEhDKsJK-v6pV3Jfk93EmvJKhd8w99AsynBtc1-qdhPnmOUsjTOxQzNzb5PRbkqkTBbHzt2AdfEqPneTYJOAUbJy_EfBVWGfcwQdCuGImFP55GcHbfR4egIULApMovdGz8IiCTqZdbYSnv_V83sm7t46McH8GluLUA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-forge-black/90 via-forge-black/40 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-end pb-5 text-center">
+<span class="text-headline-md font-headline-md text-warm-ivory tracking-wider uppercase drop-shadow-md">PARRILLAS</span>
+<span class="text-body-sm font-body-sm text-primary tracking-widest uppercase mt-0.5 underline decoration-primary/50 underline-offset-4 group-hover:text-warm-ivory transition-colors">Ver</span>
+</div>
+</a>
+<!-- Fogoneros -->
+<a class="group relative block w-full h-44 overflow-hidden rounded border border-carbon-border" href="#" id="fogoneros">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Architectural raw steel outdoor firepit fire bowl with vigorous dancing golden fire flames and bright embers resting on a pebble terrace in front of a rustic wood pile. Dramatic warm glow against pitch black night sky, artisanal blacksmith craft." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjXPtviFvy3oooRaKuN8q8qNaPNTm6nbpAREGyfs2EQvKsOaSrwmQ_Wf8Vw1pKWWP7cyD2eaunRd2D0jv59x2V8LHpMKmZ29XGoVweQ-OltQGq74Xw0S0DCeLyU8zMnVG_Y2zqvkp3VA3adU35Sg1fHrtoStlXBsU0xNex9BSFEI8_CyHrf4ttgURX8SfSI1Rk5rlujrNgJN7YkVg5u1sRXpoIf00PMg2O6r-iCkYYEPHfdzDQtSZ7aQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-forge-black/90 via-forge-black/40 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-end pb-5 text-center">
+<span class="text-headline-md font-headline-md text-warm-ivory tracking-wider uppercase drop-shadow-md">FOGONEROS</span>
+<span class="text-body-sm font-body-sm text-primary tracking-widest uppercase mt-0.5 underline decoration-primary/50 underline-offset-4 group-hover:text-warm-ivory transition-colors">Ver</span>
+</div>
+</a>
+<!-- Leñeros -->
+<a class="group relative block w-full h-44 overflow-hidden rounded border border-carbon-border" href="#" id="leneros">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Circular sculptural steel firewood holder ring made of heavy patina oxidized rusted iron loaded with round wood logs in a minimalist luxury gravel garden. Rich earthy rust orange and forged iron palette under natural soft daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYNu9HN3zy-vmOUKvmJM4X2pDLxFzzxFYlNCzJ_8ZfOElIw08TAtEo8HrKOHQGa8gs62DvyvtSatMWr1cKWUTTkDwLNxufKGH7tkoDimUUmAk-18b6Z7KtU5ajA_t24m7Rm29LPOOzUNPQt5r0ugdvmHHJ683r9q-_8NgUggpRWpAeTXWJBdfwpAz6RP_osjPR1amS26sY8Mu-UdEfrBDa7InWDw0S32QLCCPGZtJ60YdQqDJNMBkm_A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-forge-black/90 via-forge-black/40 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-end pb-5 text-center">
+<span class="text-headline-md font-headline-md text-warm-ivory tracking-wider uppercase drop-shadow-md">LEÑEROS</span>
+<span class="text-body-sm font-body-sm text-primary tracking-widest uppercase mt-0.5 underline decoration-primary/50 underline-offset-4 group-hover:text-warm-ivory transition-colors">Ver</span>
+</div>
+</a>
+<!-- Hornos -->
+<a class="group relative block w-full h-44 overflow-hidden rounded border border-carbon-border" href="#" id="hornos">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Rugged corten oxidized iron wood-fired outdoor oven with roaring bright interior fire flame visible through steel door window. Handcrafted metal forging details with warm hearth glow, stacked oak logs background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpYqR7mI_3m98tPfoIp__hci8N0PpRwZ60GG0kgizJ99bVslQX2nuZi2jRC7lIheKwm8LbMdNBQ3oZQLJyPxX-LPJZTu7vT7Zx2H-qmz_WToFbAzkvzp6lP9X5cvAFilYbr_fUKvkTXpA22dp-d1jdh8WUW82Sw1guaf2f6R96Tf9YuYX00HEfKJlCOPeesN-8j2dkKJkBpvLVxnWVKBXgSZ163yasQP6W2RKB_1gV-MbUb_rAmylPow"/>
+<div class="absolute inset-0 bg-gradient-to-t from-forge-black/90 via-forge-black/40 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-end pb-5 text-center">
+<span class="text-headline-md font-headline-md text-warm-ivory tracking-wider uppercase drop-shadow-md">HORNOS</span>
+<span class="text-body-sm font-body-sm text-primary tracking-widest uppercase mt-0.5 underline decoration-primary/50 underline-offset-4 group-hover:text-warm-ivory transition-colors">Ver</span>
+</div>
+</a>
+<!-- Accesorios -->
+<a class="group relative block w-full h-44 overflow-hidden rounded border border-carbon-border" href="#" id="accesorios">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Artisanal heavy gauge iron grilling tools including steel clamps, tongs, fire pokers and grill grates resting over rough rustic timber log bench. High-contrast metal highlights, warm charcoal soot accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0FT5znzYXYeypUWeJOgZV4QiryKxdOH8pgooFGpGby257c0iISjFfeGn34QUxEyFeCMjMja0NY1lgvBrDWsSfUlqH0Hvh6Zwd5QpptI1JY0xST1O0_5ETKfyM_v3M0HlPUX4PfbyQ4euVuBx1ycWIz3i-3B9D0soYahW_uzNB8MBen-nBn74YVaKherS1srOYsKoK5S5n2Czq6heNXrlEhCGCkXUwwkLcHfL1LMpo7C25FhckfE3v_g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-forge-black/90 via-forge-black/40 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-end pb-5 text-center">
+<span class="text-headline-md font-headline-md text-warm-ivory tracking-wider uppercase drop-shadow-md">ACCESORIOS</span>
+<span class="text-body-sm font-body-sm text-primary tracking-widest uppercase mt-0.5 underline decoration-primary/50 underline-offset-4 group-hover:text-warm-ivory transition-colors">Ver</span>
+</div>
+</a>
+<!-- Cubiertos -->
+<a class="group relative block w-full h-44 overflow-hidden rounded border border-carbon-border" href="#" id="cubiertos">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High-end hand-forged Argentine gaucho knives with custom antler and exotic wood handles, polished damascus carbon steel blades lined up inside a bespoke dark leather artisan roll. Luxury culinary craftsmanship aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4dYpDWUxKcdQE2yguamxHfFfH-DxxN05lVEBS2Hr5xHLRUvRjDb1fDiR2ct17Gdg8scsRCzK0eMAaKHEyQspuke3QUcUMNz2hEpLXxw0g-CTBWzu1jxU6t7zWGqYem1KQgS01LroFUTB7h3-HvzCLi4RcyVDJYtpdh_nhbcHyqf7FiOzc5fPfmBxs90mvCFRy5yMxvvDBpvQclDLttHnDw1iYWrCItan7t3j21ZIjz7h_qbwoxpHO6A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-forge-black/90 via-forge-black/40 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-end pb-5 text-center">
+<span class="text-headline-md font-headline-md text-warm-ivory tracking-wider uppercase drop-shadow-md">CUBIERTOS</span>
+<span class="text-body-sm font-body-sm text-primary tracking-widest uppercase mt-0.5 underline decoration-primary/50 underline-offset-4 group-hover:text-warm-ivory transition-colors">Ver</span>
+</div>
+</a>
+<!-- Sartenes -->
+<a class="group relative block w-full h-44 overflow-hidden rounded border border-carbon-border" href="#" id="sartenes">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Trio of pre-seasoned heavy black cast-iron skillets stacked neatly on aged charred timber boards with rustic forged iron riveted handles. Sleek deep soot matte black textures, warm ambient forge workshop light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw4vyqXdUsQfsZYLNnoiU6FD8k9n8X3MqEUbaj4GLaG4Z6OSWjRXX1k2_KN9tBmciL8hMLeJODcs7chQAh1d5vauVe87ndURk3OljC3FewKMSJlL9DVrrBA1ocVXyhPElF-sIztcE1DhR_tqXb_252YfRLxHWPfsAKuljKBpLszRRkGDkvXA5ebMHGBUVzy3R2eRFIchukWpgongrwL1vhjXyMLNINcG_h7QoW3BFEo186-r6syqI_Wg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-forge-black/90 via-forge-black/40 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-end pb-5 text-center">
+<span class="text-headline-md font-headline-md text-warm-ivory tracking-wider uppercase drop-shadow-md">SARTENES</span>
+<span class="text-body-sm font-body-sm text-primary tracking-widest uppercase mt-0.5 underline decoration-primary/50 underline-offset-4 group-hover:text-warm-ivory transition-colors">Ver</span>
+</div>
+</a>
+<!-- Merch -->
+<a class="group relative block w-full h-44 overflow-hidden rounded border border-carbon-border" href="#" id="merch">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Folded premium heavyweight cotton streetwear apparel and aprons in charcoal, heather grey and washed terracotta, stamped with minimalist vintage forge blacksmith emblem typography. Soft moody lifestyle studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT4vPAl6ulMC2hrK_fmTA4zei65X4mI4udpKovAUN3NVQOYtTtlWg7JEmUQOmvODM_W-1tLFBO_tg6q65MfxDsnCE7yPXznTGrETzgI2VIJEQbc7jVHpEoBRDaFOm7icUrv5nIjyjDlWX3XYC-tadQo76pQhDo0mhNl7UE6-Ab9obB2uZNFSrbIBIjpn-IqlFKkAr82CxFKQD8rFo2ZSMKwyvww6B3OQRmIMLN4TEa__-z7sKxUArrkg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-forge-black/90 via-forge-black/40 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-end pb-5 text-center">
+<span class="text-headline-md font-headline-md text-warm-ivory tracking-wider uppercase drop-shadow-md">MERCH</span>
+<span class="text-body-sm font-body-sm text-primary tracking-widest uppercase mt-0.5 underline decoration-primary/50 underline-offset-4 group-hover:text-warm-ivory transition-colors">Ver</span>
+</div>
+</a>
+<!-- Gift Card -->
+<a class="group relative block w-full h-44 overflow-hidden rounded border border-carbon-border" href="#" id="gift-card">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Matte black luxury metal gift vouchers with ornate gold foil filigree engraved lettering reading UN REGALO PARA VOS resting on a dark graphite textured slate background. Elegant luxury metallic gold reflection and premium finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDLSo8ZFJUvD18Y-46lbA_CBTx6xt1UheKIlM1OvSTEQG1u_l0Octd6Q87wJFwU5dCIqYV9cv1mBJDsAVL1QsymSHH_7OdoNC_OCkELoBZJ65_IN7HPx1qzl6wwlKFDbhOEOvgN3x3BZPfIJIlXLt31w4Vp4eF6xFtb4xOAGMKUgQm4SKwo2VQT04XbPsIdUXLEWvAx6C4he9KrAo3dr3syEuixdwypbcaLW0ix4Gb-x8GofsDa_AIDw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-forge-black/90 via-forge-black/40 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-end pb-5 text-center">
+<span class="text-headline-md font-headline-md text-warm-ivory tracking-wider uppercase drop-shadow-md">GIFT CARD</span>
+<span class="text-body-sm font-body-sm text-primary tracking-widest uppercase mt-0.5 underline decoration-primary/50 underline-offset-4 group-hover:text-warm-ivory transition-colors">Ver</span>
+</div>
+</a>
+</div>
+</section>
+<!-- 5. Sección Destacados -->
+<section class="px-4 py-8 bg-surface-container-lowest border-y border-carbon-border" id="destacados">
+<div class="text-center mb-6">
+<h2 class="text-headline-md font-headline-md text-warm-ivory tracking-wider">Destacados</h2>
+<div class="w-12 h-0.5 bg-primary mx-auto mt-2"></div>
+</div>
+<!-- Product Grid 2-cols Mobile -->
+<div class="grid grid-cols-2 gap-3">
+<!-- 1. Iniciador de Fuego -->
+<article class="bg-surface rounded border border-carbon-border flex flex-col overflow-hidden hover:border-primary/50 transition-colors">
+<div class="relative bg-surface-container-high/40 aspect-square p-3 flex items-center justify-center">
+<span class="absolute top-2 left-2 bg-charcoal-steel/90 text-primary text-[10px] font-semibold px-1.5 py-0.5 border border-primary/30 uppercase tracking-wider">Envío gratis</span>
+<img class="w-full h-full object-contain" data-alt="Stainless steel and heavy iron charcoal fire chimney starter cylinder with wooden heat-resistant ergonomic handle photographed on neutral soot seamless studio backdrop. Clean minimalist product presentation with metallic steel highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxOvafwEHZt4VJeJbeQ8nVmYJjPmMRfdAqbKmjYfKdloVUX1H5lQxo7SrWnO4lq4SAcsyQlIofsDoxlL7uVJOih3kDVHCiVEusRfTBjDkiWfo31thkBqvomxYZPt_54J_TeoJszvpKRRi_uVbjmehhElBtv9gCVNlhif1IqG39au6W7nJLWW0ziyhOZTOLXqnrQzcF7keyBHzhHbD2oVl4Dt2Z4qGL0CFS56LxCbowS0LJdYeVxT8XTQ"/>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between">
+<div>
+<h3 class="text-body-sm font-body-sm text-warm-ivory font-medium line-clamp-2 min-h-[36px]">Iniciador de Fuego</h3>
+<p class="text-price-catalog font-price-catalog text-warm-ivory mt-1">$89.000,00</p>
+<p class="text-[11px] font-price-catalog text-primary mt-0.5 font-medium">$80.100,00 <span class="text-[10px] font-body-sm text-muted-stone">con Transferencia o depósito bancario</span></p>
+</div>
+<button class="mt-3 w-full py-1.5 border border-primary/70 text-primary hover:bg-primary hover:text-forge-black font-label-caps text-[10px] tracking-wider uppercase transition-colors">Comprar</button>
+</div>
+</article>
+<!-- 2. Mini Bjorn - Brasero de mesa -->
+<article class="bg-surface rounded border border-carbon-border flex flex-col overflow-hidden hover:border-primary/50 transition-colors">
+<div class="relative bg-surface-container-high/40 aspect-square p-3 flex items-center justify-center">
+<span class="absolute top-2 left-2 bg-charcoal-steel/90 text-primary text-[10px] font-semibold px-1.5 py-0.5 border border-primary/30 uppercase tracking-wider">Envío gratis</span>
+<img class="w-full h-full object-contain" data-alt="Miniature compact black iron table-top fire bowl brasero with tripod legs and laser-cut branding emblem on clean dark studio backdrop. Sleek matte black heat-treated steel finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8fi-GAU7vA35t1H2TZVVmdFAc9IRj3hwJZ94jjbvfrBIoPS16quuxxDW8Q3bY83Zp0SyMvlC48lRmi1KOM8zS2E0WhFgfTF4AD0DWu7quYKjBDMhfjPSvzAyyO4xKJFJXy4SkeWXoJPT56DOPJDObrH_CoHuku2_oZbm4pkwVS-sgjKXLXzxg-pURbGt6qWkptcZ5XZmjirDiGBg0FHU7RfbHyxaPoXpnUE_43qck_eUab_vIXCNOKg"/>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between">
+<div>
+<h3 class="text-body-sm font-body-sm text-warm-ivory font-medium line-clamp-2 min-h-[36px]">Mini Bjorn - Brasero de mesa</h3>
+<p class="text-price-catalog font-price-catalog text-warm-ivory mt-1">$139.800,00</p>
+<p class="text-[11px] font-price-catalog text-primary mt-0.5 font-medium">$125.820,00 <span class="text-[10px] font-body-sm text-muted-stone">con Transferencia o depósito bancario</span></p>
+</div>
+<button class="mt-3 w-full py-1.5 border border-primary/70 text-primary hover:bg-primary hover:text-forge-black font-label-caps text-[10px] tracking-wider uppercase transition-colors">Comprar</button>
+</div>
+</article>
+<!-- 3. Odín Full Inox -->
+<article class="bg-surface rounded border border-carbon-border flex flex-col overflow-hidden hover:border-primary/50 transition-colors">
+<div class="relative bg-surface-container-high/40 aspect-square p-3 flex items-center justify-center">
+<span class="absolute top-2 left-2 bg-charcoal-steel/90 text-primary text-[10px] font-semibold px-1.5 py-0.5 border border-primary/30 uppercase tracking-wider">Envío gratis</span>
+<img class="w-full h-full object-contain" data-alt="High-end flagship outdoor stainless steel and black iron asador cart grill with carriage wagon wheels, rooftop chimney and multi-tier roasting spits on studio soot background. Luxurious heavy metal culinary architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzdEW-DTBGSpySvMbGOH50ieKWW8_X41Z4b1YQBSdmVrGk3pEiDoReYhZU9K0Ry4KoKOxTxIU_dc9R7pMiMz6FzqnbC3QjbMctqslPyVgiZiox_dl4mWtIgjfsIOmnsksbbaUoO3kCXelIiy2Crq5Mbzswm3mKPGfDpJ-YOGsEJNvr4QleRimgeMQhFjwpq1aoWW4geebmYisujpcPYJWFJmqW_lZ1EblBsoXDsF2UlQYcz2-hpSHslA"/>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between">
+<div>
+<h3 class="text-body-sm font-body-sm text-warm-ivory font-medium line-clamp-2 min-h-[36px]">Odín Full Inox</h3>
+<p class="text-price-catalog font-price-catalog text-warm-ivory mt-1">$7.380.000,00</p>
+<p class="text-[11px] font-price-catalog text-primary mt-0.5 font-medium">$6.642.000,00 <span class="text-[10px] font-body-sm text-muted-stone">con Transferencia o depósito bancario</span></p>
+</div>
+<button class="mt-3 w-full py-1.5 border border-primary/70 text-primary hover:bg-primary hover:text-forge-black font-label-caps text-[10px] tracking-wider uppercase transition-colors">Comprar</button>
+</div>
+</article>
+<!-- 4. Björn 100 -->
+<article class="bg-surface rounded border border-carbon-border flex flex-col overflow-hidden hover:border-primary/50 transition-colors">
+<div class="relative bg-surface-container-high/40 aspect-square p-3 flex items-center justify-center">
+<span class="absolute top-2 left-2 bg-charcoal-steel/90 text-primary text-[10px] font-semibold px-1.5 py-0.5 border border-primary/30 uppercase tracking-wider">Envío gratis</span>
+<img class="w-full h-full object-contain" data-alt="Heavy gauge steel round asador fire pit bowl with modular cross grill and clamp spit roaster in oxidized corten patina bronze finish on seamless backdrop. Professional barbecue pit equipment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkUnG2vQ8cF6bpOCa1tqkUnHoPWm0hyf7T1KLgtvvnKbEjxbGGAa_YIBu5eW3nF5cSbsvTDzjzRmkdKgH1R61NHL2PkCRMp4dZzdvn-zOuCrMmcG-8Sz6AswOuUl9j5LeI4szf9WN9tyaxV8Srkl-m8S20OhnE2Hy-QE3nL9JhQIV3ojnM9-vXo5KEYm4uFaikeVSwP5Pp4Tv9c05DoJEEecWmq13DUwPq5_BLT138elhWGvAMBgAQxw"/>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between">
+<div>
+<h3 class="text-body-sm font-body-sm text-warm-ivory font-medium line-clamp-2 min-h-[36px]">Björn 100</h3>
+<p class="text-price-catalog font-price-catalog text-warm-ivory mt-1">$925.400,00</p>
+<p class="text-[11px] font-price-catalog text-primary mt-0.5 font-medium">$832.860,00 <span class="text-[10px] font-body-sm text-muted-stone">con Transferencia o depósito bancario</span></p>
+</div>
+<button class="mt-3 w-full py-1.5 border border-primary/70 text-primary hover:bg-primary hover:text-forge-black font-label-caps text-[10px] tracking-wider uppercase transition-colors">Comprar</button>
+</div>
+</article>
+<!-- 5. Ragnar 100 -->
+<article class="bg-surface rounded border border-carbon-border flex flex-col overflow-hidden hover:border-primary/50 transition-colors">
+<div class="relative bg-surface-container-high/40 aspect-square p-3 flex items-center justify-center">
+<span class="absolute top-2 left-2 bg-charcoal-steel/90 text-primary text-[10px] font-semibold px-1.5 py-0.5 border border-primary/30 uppercase tracking-wider">Envío gratis</span>
+<img class="w-full h-full object-contain" data-alt="Artisanal mobile fire wagon grill with large decorative iron cart wheels, hardwood cutting board shelf and central fire pit basin, oxidized patina iron on isolated dark studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJab33eHgJpshPD9yv50Yk9hTCqJ_gPF9x78a_ksL8NVSQ8OebNoa6a13RK1MDjJbpzpEFeD1LEYpOzA_JH3YFNKxMC3RwzEQ0yEASS5NG637HrfDfnueU7mljpt3vA6eEFnaMK7onntmI5-cp-LjxpwTWexjKEFDLH-iMny54aogQqmFtfykGNl6Rh4t0x4xYNiEbaSy2UVSYspKS9oULNI_9oooffBFjztOJr_6Wj35RKiFhWTnWrg"/>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between">
+<div>
+<h3 class="text-body-sm font-body-sm text-warm-ivory font-medium line-clamp-2 min-h-[36px]">Ragnar 100</h3>
+<p class="text-price-catalog font-price-catalog text-warm-ivory mt-1">$1.167.400,00</p>
+<p class="text-[11px] font-price-catalog text-primary mt-0.5 font-medium">$1.050.660,00 <span class="text-[10px] font-body-sm text-muted-stone">con Transferencia o depósito bancario</span></p>
+</div>
+<button class="mt-3 w-full py-1.5 border border-primary/70 text-primary hover:bg-primary hover:text-forge-black font-label-caps text-[10px] tracking-wider uppercase transition-colors">Comprar</button>
+</div>
+</article>
+<!-- 6. Floki -->
+<article class="bg-surface rounded border border-carbon-border flex flex-col overflow-hidden hover:border-primary/50 transition-colors">
+<div class="relative bg-surface-container-high/40 aspect-square p-3 flex items-center justify-center">
+<span class="absolute top-2 left-2 bg-charcoal-steel/90 text-primary text-[10px] font-semibold px-1.5 py-0.5 border border-primary/30 uppercase tracking-wider">Envío gratis</span>
+<img class="w-full h-full object-contain" data-alt="Heavy duty mobile outdoor fire pit cart grill with quadruple vintage carriage wheels, adjustable angle spit and wooden side table tray on clean neutral dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiMWcQAOM-95cuMVeB1roCHLwa3z8hdmo0krVvpUzQ9Hn6YHOfcf2UcvF9467vYaz8tdlcYYERxbv8p-S2CtfJA3MyPvjG1HvpIfccQJzel5SlCKLVrolQI3URnMOMlj2K6s0KihAfGLDwhwCDGoEJSuX_j4dC74SN4pVVLSjAVwa7xtewmS3KNxtGFAPSB0vdx7lFX2ojtIKlTtneMIjG0a0TBWavRFCns8EVfBWRF0GllSjUhWwKtg"/>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between">
+<div>
+<h3 class="text-body-sm font-body-sm text-warm-ivory font-medium line-clamp-2 min-h-[36px]">Floki</h3>
+<p class="text-price-catalog font-price-catalog text-warm-ivory mt-1">$2.222.600,00</p>
+<p class="text-[11px] font-price-catalog text-primary mt-0.5 font-medium">$2.000.340,00 <span class="text-[10px] font-body-sm text-muted-stone">con Transferencia o depósito bancario</span></p>
+</div>
+<button class="mt-3 w-full py-1.5 border border-primary/70 text-primary hover:bg-primary hover:text-forge-black font-label-caps text-[10px] tracking-wider uppercase transition-colors">Comprar</button>
+</div>
+</article>
+<!-- 7. Combo Sartenes -->
+<article class="bg-surface rounded border border-carbon-border flex flex-col overflow-hidden hover:border-primary/50 transition-colors">
+<div class="relative bg-surface-container-high/40 aspect-square p-3 flex items-center justify-center">
+<span class="absolute top-2 left-2 bg-charcoal-steel/90 text-primary text-[10px] font-semibold px-1.5 py-0.5 border border-primary/30 uppercase tracking-wider">Envío gratis</span>
+<img class="w-full h-full object-contain" data-alt="Set of three handcrafted carbon steel frying pans with elongated riveted handles arranged in a clean geometric fan composition on dark studio grey backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDufMhaUTZN9EbTnV2j8AWm7XQYUiiSD3Iq_6sR0kOWeV4rU-TGvmRGnrTpSodH2WxaVyKmsfvFOyXilC6RoJDAH512bf3JlWUtkcme8PRcgnVrjjyb-D-yGeHg92yUiK_LZ_hpQjqtrYNmr-AA3KJxba7BRvk4ecnDpn68ITufh3U_DdTFogwjo58NizlhigoOtyZ673oK3mL1XWZFCb1WTiHr2-D2avQepB9Z82zPX16sgho1THX1hg"/>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between">
+<div>
+<h3 class="text-body-sm font-body-sm text-warm-ivory font-medium line-clamp-2 min-h-[36px]">Combo Sartenes</h3>
+<p class="text-price-catalog font-price-catalog text-warm-ivory mt-1">$214.115,00</p>
+<p class="text-[11px] font-price-catalog text-primary mt-0.5 font-medium">$192.703,50 <span class="text-[10px] font-body-sm text-muted-stone">con Transferencia o depósito bancario</span></p>
+</div>
+<button class="mt-3 w-full py-1.5 border border-primary/70 text-primary hover:bg-primary hover:text-forge-black font-label-caps text-[10px] tracking-wider uppercase transition-colors">Comprar</button>
+</div>
+</article>
+<!-- 8. Fogonero Francis con Plancha -->
+<article class="bg-surface rounded border border-carbon-border flex flex-col overflow-hidden hover:border-primary/50 transition-colors">
+<div class="relative bg-surface-container-high/40 aspect-square p-3 flex items-center justify-center">
+<span class="absolute top-2 left-2 bg-charcoal-steel/90 text-primary text-[10px] font-semibold px-1.5 py-0.5 border border-primary/30 uppercase tracking-wider">Envío gratis</span>
+<img class="w-full h-full object-contain" data-alt="Geometric inverted pyramid steel fire basket with heavy carbon iron griddle plancha top plate resting over solid base, rustic industrial outdoor cooking equipment on studio backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkjd24NBxA4WuY6BN1gFVIofj4sSF1_TDCYfwD7IJ8AG5vcrzT9OAeZDWT6-urpegdST-VMZGqCtCSgXaaOfAnNFiaVxSyyEY83aosqe0u_U6B0jA7z_peBhZbpya8j9C-eW56YYcNwbQAsmMtVdrmHIe-nziRa_T5fhtMbfuw7UCDErwLHPD74dwlWvBErhsVUafW2xy7-7RFsKaobXq-Scy7ySe5i3DIiEwufC6WvXrU4BpIeqo_1g"/>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between">
+<div>
+<h3 class="text-body-sm font-body-sm text-warm-ivory font-medium line-clamp-2 min-h-[36px]">Fogonero Francis con Plancha</h3>
+<p class="text-price-catalog font-price-catalog text-warm-ivory mt-1">$985.000,00</p>
+<p class="text-[11px] font-price-catalog text-primary mt-0.5 font-medium">$886.500,00 <span class="text-[10px] font-body-sm text-muted-stone">con Transferencia o depósito bancario</span></p>
+</div>
+<button class="mt-3 w-full py-1.5 border border-primary/70 text-primary hover:bg-primary hover:text-forge-black font-label-caps text-[10px] tracking-wider uppercase transition-colors">Comprar</button>
+</div>
+</article>
+</div>
+</section>
+<!-- 6. Bloque de Validación / Selección Argentina (Qatar 2022) -->
+<section class="mx-4 my-8 rounded-lg overflow-hidden border border-qatar-gold/40 bg-gradient-to-b from-surface-container-high via-surface-container to-forge-black p-5 relative shadow-[0_4px_30px_rgba(212,175,55,0.1)]">
+<!-- Ornaments & Stripes -->
+<div class="flex items-center justify-center gap-1 mb-3">
+<div class="h-[2px] w-12 bg-tertiary-container"></div>
+<div class="h-[2px] w-6 bg-warm-ivory"></div>
+<div class="h-[2px] w-12 bg-tertiary-container"></div>
+</div>
+<div class="text-center relative z-10">
+<div class="inline-flex items-center gap-1 text-qatar-gold mb-1">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h2 class="text-headline-md font-headline-md text-gold-gradient font-bold tracking-wider leading-snug">
+        FUIMOS ELEGIDOS POR LA SELECCIÓN
+      </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-3 leading-relaxed max-w-sm mx-auto">
+        En el mundial de 2022, la seleccion eligió nuestra <strong class="text-warm-ivory font-semibold">"PARRILLA QATAR"</strong> para acompañarlos durante todos los partidos.
+      </p>
+<!-- Featured Qatar Grill Mockup -->
+<div class="my-5 p-3 rounded bg-forge-black/80 border border-qatar-gold/30">
+<img class="w-full h-48 object-contain" data-alt="Official Qatar 2022 edition artisanal black steel Argentine grill featuring commemorative engraved golden championship brass plaque, crank elevation gear and heavy fire bricks on dark studio backdrop with sky blue and gold ambient light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWNNpP4pZLHOx00YQSkmZpsxNa3gdl97TGXgRaXlM7-OluqZMyZSl_p88qTTUwyGjaB4569qnzjUli8TWQ_DzGAm-YDnu3yRXoPGq6WzcVVcSPzOaxhWjtWoVZP7jGIUNbRX6Rlaw9AoPZ8WFww_TFPBnBt2qNMQXJI7W6nF2E3epCyLtgaj_qWq03iucCrTmWJXUpD9Vmjywuz6XdjhFGO8SXcssopK6dSiv4YCwvmYgwFhRKcYQjNw"/>
+<div class="mt-2 flex items-center justify-between pt-2 border-t border-carbon-border">
+<span class="text-body-sm font-body-sm text-qatar-gold font-semibold uppercase tracking-wider">Edición Oficial Qatar</span>
+<a class="text-label-caps font-label-caps text-warm-ivory underline hover:text-primary transition-colors" href="#">Conocé la historia →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Franja de Confianza y Servicios -->
+<section class="px-4 py-6 bg-charcoal-steel/60 border-y border-carbon-border">
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-start gap-3 p-2">
+<span class="material-symbols-outlined text-primary text-[28px] mt-0.5">local_shipping</span>
+<div>
+<h4 class="text-body-sm font-body-sm font-bold text-warm-ivory uppercase tracking-wider">ENVÍOS</h4>
+<p class="text-[12px] font-body-sm text-muted-stone mt-0.5">Hacemos envíos a todo el país</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-2">
+<span class="material-symbols-outlined text-primary text-[28px] mt-0.5">account_balance_wallet</span>
+<div>
+<h4 class="text-body-sm font-body-sm font-bold text-warm-ivory uppercase tracking-wider">PAGOS</h4>
+<p class="text-[12px] font-body-sm text-muted-stone mt-0.5">10% off pagando con transferencia</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-2">
+<span class="material-symbols-outlined text-primary text-[28px] mt-0.5">verified_user</span>
+<div>
+<h4 class="text-body-sm font-body-sm font-bold text-warm-ivory uppercase tracking-wider">GARANTÍA</h4>
+<p class="text-[12px] font-body-sm text-muted-stone mt-0.5">14 días de garantía de fábrica</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-2">
+<span class="material-symbols-outlined text-primary text-[28px] mt-0.5">restaurant_menu</span>
+<div>
+<h4 class="text-body-sm font-body-sm font-bold text-warm-ivory uppercase tracking-wider">MATERIALES</h4>
+<p class="text-[12px] font-body-sm text-muted-stone mt-0.5">De calidad y apto consumo alimenticio</p>
+</div>
+</div>
+</div>
+<!-- Banner Nuestra Historia -->
+<div class="mt-4 p-4 rounded bg-surface border border-carbon-border">
+<h3 class="text-headline-sm font-headline-sm text-primary">Nuestra Historia</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-relaxed">
+        El fuego, las herramientas y la buena comida. Tres pasiones que se unieron en 2018 y dieron origen a algo más grande.
+      </p>
+<a class="inline-block mt-2 text-label-caps font-label-caps text-primary underline underline-offset-4 uppercase tracking-wider" href="#">Ver más</a>
+</div>
+</section>
+<!-- 8. Testimonios de Clientes y Personalidades -->
+<section class="px-4 py-8">
+<div class="text-center mb-6">
+<h2 class="text-headline-md font-headline-md text-warm-ivory tracking-wider">Testimonios</h2>
+<p class="text-body-sm font-body-sm text-muted-stone mt-1">La confianza de quienes viven el ritual del fuego</p>
+<div class="w-12 h-0.5 bg-primary mx-auto mt-2"></div>
+</div>
+<div class="flex flex-col gap-3.5">
+<!-- Manu Ginóbili -->
+<div class="bg-surface rounded p-4 border border-primary/30 relative">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[10px] font-label-caps text-primary border border-primary/40 px-1.5 py-0.5 rounded uppercase">Personalidad</span>
+</div>
+<h4 class="text-body-md font-body-md font-bold text-warm-ivory">Manu Ginobili</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant italic mt-1">"Usa FUEGOS JL desde EE.UU."</p>
+</div>
+<!-- Santiago Giorgini -->
+<div class="bg-surface rounded p-4 border border-carbon-border">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[10px] font-label-caps text-muted-stone border border-carbon-border px-1.5 py-0.5 rounded uppercase">Chef Pro</span>
+</div>
+<h4 class="text-body-md font-body-md font-bold text-warm-ivory">Santiago Giorgini</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant italic mt-1">"Nos elije para sus recetas."</p>
+</div>
+<!-- Julián Delgado -->
+<div class="bg-surface rounded p-4 border border-carbon-border">
+<div class="flex items-center gap-1 text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface italic">"Súper confiables, calidad de productos y atención 🔟 recomiendo 🔥"</p>
+<div class="mt-2 text-right">
+<span class="text-body-sm font-body-sm font-semibold text-primary">Julián Delgado</span>
+<span class="text-[11px] text-muted-stone block">Dueño de Ragnar 80</span>
+</div>
+</div>
+<!-- Maxi Scandura -->
+<div class="bg-surface rounded p-4 border border-carbon-border">
+<div class="flex items-center gap-1 text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface italic">"Excelentes productos... es Disney para los que les gusta el fuego"</p>
+<div class="mt-2 text-right">
+<span class="text-body-sm font-body-sm font-semibold text-primary">Maxi Scandura</span>
+<span class="text-[11px] text-muted-stone block">Dueño de Ivar God 2.0</span>
+</div>
+</div>
+<!-- Lucas Moro -->
+<div class="bg-surface rounded p-4 border border-carbon-border">
+<div class="flex items-center gap-1 text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface italic">"Compré un bjorn 80 y es un lujo. Si tenés poco espacio va como piña"</p>
+<div class="mt-2 text-right">
+<span class="text-body-sm font-body-sm font-semibold text-primary">Lucas Moro</span>
+<span class="text-[11px] text-muted-stone block">Dueño de Bjorn 80</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Newsletter & Redes Sociales -->
+<section class="px-4 py-8 bg-surface-container-low border-t border-carbon-border">
+<div class="text-center max-w-sm mx-auto">
+<span class="material-symbols-outlined text-primary text-[32px] mb-2">mail</span>
+<h3 class="text-headline-sm font-headline-sm text-warm-ivory">Newsletter</h3>
+<p class="text-body-sm font-body-sm text-muted-stone mt-1">Registrate y recibí un 5% off en tu primera compra</p>
+<form class="mt-4 flex flex-col gap-2.5" onsubmit="event.preventDefault();">
+<input class="w-full bg-forge-black border border-carbon-border rounded px-4 py-2.5 text-body-sm font-body-sm text-warm-ivory placeholder-muted-stone focus:outline-none focus:border-primary transition-colors" placeholder="Ingresá tu email" type="email"/>
+<button class="w-full bg-primary-container text-forge-black font-semibold font-label-caps text-label-caps py-3 tracking-widest uppercase hover:bg-primary active:scale-95 transition-all" type="submit">
+          SUSCRIBIRME
+        </button>
+</form>
+<!-- Redes Sociales -->
+<div class="mt-6 flex items-center justify-center gap-4 text-muted-stone">
+<a aria-label="Instagram" class="p-2 border border-carbon-border rounded-full hover:text-primary hover:border-primary transition-colors" href="https://instagram.com/fuegosjl">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</a>
+<a aria-label="Facebook" class="p-2 border border-carbon-border rounded-full hover:text-primary hover:border-primary transition-colors" href="https://facebook.com/fuegosjl">
+<span class="material-symbols-outlined text-[20px]">thumb_up</span>
+</a>
+<a aria-label="YouTube" class="p-2 border border-carbon-border rounded-full hover:text-primary hover:border-primary transition-colors" href="https://youtube.com/@fuegosjl">
+<span class="material-symbols-outlined text-[20px]">play_circle</span>
+</a>
+<a aria-label="TikTok" class="p-2 border border-carbon-border rounded-full hover:text-primary hover:border-primary transition-colors" href="https://tiktok.com/@fuegosjl">
+<span class="material-symbols-outlined text-[20px]">music_note</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer Oficial (Shared Component) -->
+<footer class="w-full px-6 py-12 flex flex-col items-center text-center space-y-6 bg-forge-black border-t border-carbon-border">
+<div class="font-headline-md text-headline-md text-primary tracking-widest">
+      FUEGOS JL
+    </div>
+<!-- Enlaces Legales -->
+<div class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-body-sm font-body-sm">
+<a class="text-muted-stone hover:text-warm-ivory transition-colors" href="#">Términos y Condiciones</a>
+<span class="text-carbon-border">•</span>
+<a class="text-muted-stone hover:text-warm-ivory transition-colors" href="#">Políticas de Envío</a>
+<span class="text-carbon-border">•</span>
+<a class="text-muted-stone hover:text-warm-ivory transition-colors" href="#">Garantía Oficial</a>
+<span class="text-carbon-border">•</span>
+<a class="text-muted-stone hover:text-warm-ivory transition-colors" href="#">Preguntas Frecuentes</a>
+<span class="text-carbon-border">•</span>
+<a class="text-muted-stone hover:text-warm-ivory transition-colors" href="#">Contacto</a>
+</div>
+<!-- Fiscal and Contact Info -->
+<div class="text-[11px] font-body-sm text-muted-stone space-y-1">
+<p>Abdon Calderon 1089 | Tel: +54 9 11 6742-2899</p>
+<p>Defensa de las y los consumidores. Para reclamos ingresá acá. / Botón de arrepentimiento</p>
+</div>
+<!-- Copyright -->
+<div class="text-body-sm font-body-sm text-muted-stone pt-2">
+      © 2024 Fuegos JL. Todos los derechos reservados. Industria Argentina.
+    </div>
+</footer>
+<!-- Cookies Notice Bar -->
+<aside class="fixed bottom-14 left-0 right-0 z-40 bg-charcoal-steel/95 backdrop-blur-md border-t border-carbon-border px-4 py-2.5 flex items-center justify-between text-body-sm font-body-sm text-warm-ivory" id="cookie-banner">
+<p class="text-[11px] leading-tight pr-2">
+      Al navegar por este sitio <strong>aceptás el uso de cookies</strong> para agilizar tu experiencia de compra.
+    </p>
+<button class="bg-primary text-forge-black text-[11px] font-bold px-3 py-1 uppercase rounded-sm whitespace-nowrap active:scale-95 transition-transform" id="cookie-accept-btn">
+      Entendido
+    </button>
+</aside>
+<!-- Bottom Navigation Bar (Shared Component) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-charcoal-steel/95 backdrop-blur-lg border-t border-carbon-border shadow-lg">
+<!-- Inicio (Active) -->
+<a class="flex flex-col items-center justify-center text-primary py-1" href="#">
+<span class="material-symbols-outlined text-[22px]">home</span>
+<span class="text-body-sm font-body-sm tracking-wider uppercase text-[10px] mt-0.5 font-semibold">Inicio</span>
+</a>
+<!-- Catálogo -->
+<a class="flex flex-col items-center justify-center text-muted-stone hover:text-primary py-1 transition-colors" href="#destacados">
+<span class="material-symbols-outlined text-[22px]">grid_view</span>
+<span class="text-body-sm font-body-sm tracking-wider uppercase text-[10px] mt-0.5">Catálogo</span>
+</a>
+<!-- Favoritos -->
+<a class="flex flex-col items-center justify-center text-muted-stone hover:text-primary py-1 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">favorite</span>
+<span class="text-body-sm font-body-sm tracking-wider uppercase text-[10px] mt-0.5">Favoritos</span>
+</a>
+<!-- Carrito -->
+<button class="flex flex-col items-center justify-center text-muted-stone hover:text-primary py-1 transition-colors" id="bottom-cart-btn">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="text-body-sm font-body-sm tracking-wider uppercase text-[10px] mt-0.5">Carrito</span>
+</button>
+</nav>
+<!-- 10. Floating WhatsApp Action Button -->
+<aside class="fixed bottom-20 right-4 z-40">
+<a aria-label="Consultar por WhatsApp" class="flex items-center justify-center w-12 h-12 rounded-full bg-[#25D366] text-white shadow-[0_4px_16px_rgba(37,211,102,0.4)] hover:scale-105 active:scale-95 transition-transform" href="https://wa.me/5491167422899" rel="noopener noreferrer" target="_blank">
+<!-- WhatsApp Icon -->
+<svg class="w-7 h-7 fill-current" viewbox="0 0 24 24">
+<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.838.834 2.791.834 3.185 0 5.768-2.584 5.768-5.766 0-3.18-2.583-5.62-5.767-5.62zm0 10.375c-.867 0-1.716-.232-2.457-.671l-.176-.104-1.824.478.487-1.777-.115-.183c-.482-.767-.737-1.657-.736-2.573.001-2.613 2.128-4.739 4.743-4.739 2.614 0 4.741 2.126 4.741 4.74 0 2.613-2.127 4.829-4.838 4.829zm2.604-3.567c-.143-.071-.845-.417-.976-.465-.131-.048-.226-.071-.321.071-.095.143-.369.465-.453.56-.083.095-.167.107-.309.036-.143-.071-.603-.222-1.149-.709-.425-.379-.712-.847-.796-.99-.083-.143-.009-.22.062-.291.064-.064.143-.167.214-.25.071-.083.095-.143.143-.238.048-.095.024-.179-.012-.25-.036-.071-.321-.774-.44-1.06-.116-.278-.234-.24-.321-.244l-.274-.006c-.095 0-.25.036-.381.179-.131.143-.5.488-.5 1.191 0 .703.512 1.382.584 1.477.071.095 1.008 1.539 2.441 2.158.341.147.607.235.814.301.343.109.655.094.901.057.275-.041.845-.345.964-.679.119-.333.119-.619.083-.679-.035-.06-.13-.095-.273-.166z"></path>
+</svg>
+</a>
+</aside>
+<!-- Mini Cart Drawer (Toggled by shopping bag button) -->
+<div class="fixed inset-0 bg-forge-black/80 backdrop-blur-sm z-50 hidden transition-opacity" id="cart-backdrop"></div>
+<aside class="fixed inset-y-0 right-0 z-50 w-80 max-w-[85vw] flex flex-col bg-surface-container border-l border-carbon-border shadow-2xl translate-x-full transition-transform duration-300" id="cart-drawer">
+<div class="p-4 border-b border-carbon-border flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-warm-ivory">Carrito de compras</h3>
+<button class="text-muted-stone hover:text-primary" id="close-cart-btn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex-1 p-6 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-muted-stone text-[48px] mb-3">production_quantity_limits</span>
+<p class="text-body-md font-body-md text-warm-ivory font-medium">El carrito de compras está vacío.</p>
+<p class="text-body-sm font-body-sm text-muted-stone mt-1">Sumá fuego a tus reuniones eligiendo nuestras piezas artesanales.</p>
+<a class="mt-6 border border-primary text-primary px-6 py-2.5 font-label-caps text-label-caps tracking-widest uppercase hover:bg-primary hover:text-forge-black transition-colors" href="#destacados" id="explore-from-cart-btn">
+        Ver Productos
+      </a>
+</div>
+<div class="p-4 bg-forge-black border-t border-carbon-border">
+<div class="flex justify-between text-body-sm font-body-sm mb-2">
+<span class="text-muted-stone">Subtotal:</span>
+<span class="text-warm-ivory font-semibold">$0,00</span>
+</div>
+<p class="text-[11px] font-body-sm text-muted-stone mb-3">El monto mínimo de compra es de $0,00 sin incluir el costo de envío.</p>
+<button class="w-full bg-surface-variant text-muted-stone font-label-caps text-label-caps py-3 uppercase tracking-wider cursor-not-allowed" disabled="">
+        INICIAR COMPRA
+      </button>
+</div>
+</aside>
+<!-- Interactive Logic -->
+<script>
+    // Navigation Drawer
+    const navDrawer = document.getElementById('nav-drawer');
+    const drawerBackdrop = document.getElementById('drawer-backdrop');
+    const openDrawerBtn = document.getElementById('open-drawer-btn');
+    const closeDrawerBtn = document.getElementById('close-drawer-btn');
+
+    function toggleNavDrawer(open) {
+      if (open) {
+        navDrawer.classList.remove('-translate-x-full');
+        drawerBackdrop.classList.remove('hidden');
+      } else {
+        navDrawer.classList.add('-translate-x-full');
+        drawerBackdrop.classList.add('hidden');
+      }
+    }
+
+    openDrawerBtn.addEventListener('click', () => toggleNavDrawer(true));
+    closeDrawerBtn.addEventListener('click', () => toggleNavDrawer(false));
+    drawerBackdrop.addEventListener('click', () => toggleNavDrawer(false));
+
+    // Cart Drawer
+    const cartDrawer = document.getElementById('cart-drawer');
+    const cartBackdrop = document.getElementById('cart-backdrop');
+    const cartToggleBtn = document.getElementById('cart-toggle-btn');
+    const bottomCartBtn = document.getElementById('bottom-cart-btn');
+    const closeCartBtn = document.getElementById('close-cart-btn');
+    const exploreFromCartBtn = document.getElementById('explore-from-cart-btn');
+
+    function toggleCart(open) {
+      if (open) {
+        cartDrawer.classList.remove('translate-x-full');
+        cartBackdrop.classList.remove('hidden');
+      } else {
+        cartDrawer.classList.add('translate-x-full');
+        cartBackdrop.classList.add('hidden');
+      }
+    }
+
+    cartToggleBtn.addEventListener('click', () => toggleCart(true));
+    bottomCartBtn.addEventListener('click', () => toggleCart(true));
+    closeCartBtn.addEventListener('click', () => toggleCart(false));
+    cartBackdrop.addEventListener('click', () => toggleCart(false));
+    exploreFromCartBtn.addEventListener('click', () => toggleCart(false));
+
+    // Cookie Banner
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieAcceptBtn = document.getElementById('cookie-accept-btn');
+    cookieAcceptBtn.addEventListener('click', () => {
+      cookieBanner.style.display = 'none';
+    });
+  </script>
+</body></html>

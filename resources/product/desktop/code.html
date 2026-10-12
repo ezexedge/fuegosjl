@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Funda FUEGOS para Asador - Fuegos JL</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts for Cormorant/Playfair typography feel -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-gold': '#d7b368',
+            'brand-gold-dark': '#c19c4d',
+            'brand-footer': '#e8cf8c',
+            'brand-dark': '#1c1c1c',
+            'brand-accent': '#c99a3e'
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            cinzel: ['Cinzel', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-utilities">
+    /* Custom scrollbar and subtle transitions */
+    * {
+      box-sizing: border-box;
+    }
+    .custom-pill-active {
+      border-color: #1f2937;
+      background-color: #ffffff;
+      color: #111827;
+      font-weight: 500;
+    }
+    .custom-pill {
+      border: 1px solid #d1d5db;
+      background-color: #ffffff;
+      color: #374151;
+      transition: all 0.2s ease;
+    }
+    .custom-pill:hover {
+      border-color: #9ca3af;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased selection:bg-brand-gold selection:text-white pb-12">
+<!-- BEGIN: AnnouncementBar -->
+<section class="bg-black text-white text-[11px] md:text-xs py-2 tracking-wider font-medium" data-purpose="announcement-banner">
+<div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-4 sm:gap-10 text-center">
+<span>💳 10% OFF PAGANDO CON TRANSFERENCIA 💳</span>
+<span>🛻 ENVÍOS A TODO EL PAÍS 🛻</span>
+<span>💰 HASTA 6 CUOTAS SIN INTERÉS 💰</span>
+</div>
+</section>
+<!-- END: AnnouncementBar -->
+<!-- BEGIN: MainHeader -->
+<header class="border-b border-gray-100 bg-white" data-purpose="header">
+<!-- Top Nav with Search, Logo, User & Cart -->
+<div class="max-w-7xl mx-auto px-6 lg:px-12 py-3 flex items-center justify-between">
+<!-- Search Button -->
+<div class="w-1/4 flex items-center">
+<button aria-label="Buscar" class="text-gray-700 hover:text-black transition" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M21 21l-4.35-4.35m1.85-5.65a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<!-- Center Logo -->
+<div class="w-2/4 flex justify-center">
+<a class="inline-block transition transform hover:scale-105 duration-200" href="#">
+<img alt="Fuegos JL" class="h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U3Rw61yd0PuU8D66z22wskpsb1CFP2CMIcfkjlnPAbe8nyYKjtcxTiMbxTo3f7lQdJMUOogSTaqCarsrdG02jR8KYHgqDNMzlvQ81GbMPIxWE6M5JKf-RtAnKv76xr8yKD_2xbz2n-wOyHixcM3AZ6dh0_yok_XX2B15-Ni93cpN6_Zp208qCnqEiAJJneAijSZEtlOXwSVBwgQTp9G3GpGLJoH4Uo3Ax9uVJ5Kio0fTxaWD1PpS5r4wU"/>
+</a>
+</div>
+<!-- Right Actions: Account & Bag -->
+<div class="w-1/4 flex items-center justify-end space-x-6 text-gray-700">
+<a aria-label="Mi Cuenta" class="hover:text-black transition" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+<a aria-label="Carrito de compras" class="hover:text-black transition flex items-center relative" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="absolute -top-1 -right-2 text-[10px] bg-white border border-gray-400 text-gray-800 rounded-full w-4 h-4 flex items-center justify-center font-bold">0</span>
+</a>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="py-3" data-purpose="primary-navigation">
+<ul class="flex justify-center items-center space-x-8 text-xs sm:text-sm font-medium tracking-wide text-gray-700">
+<li><a class="hover:text-black transition-colors" href="#">Inicio</a></li>
+<li><a class="text-black font-semibold" href="#">Productos</a></li>
+<li><a class="hover:text-black transition-colors" href="#">Contacto</a></li>
+<li><a class="hover:text-black transition-colors" href="#">Resto del mundo</a></li>
+<li><a class="hover:text-black transition-colors" href="#">Quiénes Somos</a></li>
+</ul>
+</nav>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" data-purpose="product-detail-page">
+<!-- Grid for Product Showcase and Details -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Left Gallery Thumbnails + Main View (Takes 7 cols on LG) -->
+<div class="lg:col-span-7 flex flex-col md:flex-row gap-6 items-start">
+<!-- Thumbnail column on desktop -->
+<div class="hidden md:flex flex-col items-center space-y-3 w-20 flex-shrink-0">
+<button class="border border-black p-1 rounded-sm focus:outline-none">
+<img alt="Miniatura 1" class="w-full h-14 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr18LR68snn6EjAJPOXSEdFmQSty_CWRTVZPWXuT6oEdbgSGMxHfkIT_NOyLSBAqRLAE3l0zGgsuIrobviSMgyHzkHdgby7em7KtxiIpY1_PGJ5QSc68c2iGiaz2h_5XaBrDSSukNHSfRkJjFU314bdFzLvOjTASnHXb33s1B6RtiLne3jhoD--_wlPqy9NGYrlTnhwXKqzbGMi3o-S1Xh1SXYK1aWxcuF_C2rKye_mWZ4uHjYX5PKzg"/>
+</button>
+<button class="border border-gray-200 hover:border-gray-400 p-1 rounded-sm focus:outline-none">
+<img alt="Miniatura 2" class="w-full h-14 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFW3HCiQDNQvifnlU9VqGDSdy-Iu08AtcCo5ZhGpHZ_lE9rvJ4uhhf9WnrhUK6gnZ5NDVrIE6ej_-UTa3q452UdA4yLOy1kItVwCKvF848LE3bQBk_UAzz-u0y3GBj-yDIrPwOFOO09ffiy4UOgrYZ-PgWZg_vbu6a8M8nsp4u9CXZ7HT0Lgn18mBBGQEScWrmVG7PMGFmKqoijwID0H42bef_UlYLhkv8aWj-N9kHqabkAbuhR2jMlA"/>
+</button>
+<button class="border border-gray-200 hover:border-gray-400 p-1 rounded-sm focus:outline-none">
+<img alt="Miniatura 3" class="w-full h-14 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCswC01G7f9N-quedH4pta25k0j-k453YEYLV-skc-cqSlcRFLj5OT0qMFoQoT8Z40-Ren3t3JoIzueapjnBpfjR9Xd4TDdlLpmXoh3sB-1bH4F-kXFnRb1MnK-sC6yOL3V8cuAF1TNAaXVrpCCdsxIe3Z9mXYS5apU9ju9zZTiBfZ7dIdYo9UKGpktyDAVqQHjlFke9B4Btu82iwcGSQCDmFepEPTEUp0osBjURFhbsdAzEmIdrRCbXQ"/>
+</button>
+<button class="border border-gray-200 hover:border-gray-400 p-1 rounded-sm focus:outline-none">
+<img alt="Miniatura 4" class="w-full h-14 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_8ftnscIzC3iiqiUTAvXu8SNDb45jk6rEXoFY0Jg0HFs-QEiAjTBpbMNEwoeMYi_M_qssVeCbldARrO8rQlecVUuQJ7U_hIC8EJkHM-1DI1yI3nH9-UqQNeJwmUN6xJ2vso81vF3pkBalgzri-0irE_oVMg77z1kzJVc7SpcPSeDu1YW7s6CX-nUAHWauMzej54WrWusHqERRaodsIckQOUs0IHHLW8MjhB-Gr7B9ykIiNnoS3XynhA"/>
+</button>
+<!-- Navigation arrows for thumbnails -->
+<div class="flex flex-col space-y-1 pt-1 text-gray-500">
+<button class="hover:text-black"><svg class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 15l7-7 7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+<button class="hover:text-black"><svg class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+</div>
+</div>
+<!-- Main Product Image -->
+<div class="flex-1 flex flex-col items-center">
+<div class="w-full flex justify-center items-center bg-transparent py-4 min-h-[380px]">
+<img alt="Funda FUEGOS para Asador instalada en asador con ruedas de carro" class="max-w-full h-auto object-contain max-h-[460px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA12ogU4KVS4vb-SQoICQPloBIwMbj78iFOv55_YKKSXhFdY1RLlLUi3MTIHgl58-uZ4sGFul7ReYIL75s9klQruvZD8mvPJqkL_xI7K4G2VZInE2-rDdmsINfF_vkUwfLJEBXFJwqcmtfyelWsDFXNMi8W1cpo81483UxEZWm3hw0Y80P9yTvxEuh20laE4JcwfjddBrzBuUZPfz7CB8cR72OFmEId6MyMV03BYkFhZvUupqxdXnP7dg"/>
+</div>
+<!-- Social Share Icons underneath -->
+<div class="flex items-center space-x-6 mt-8 text-gray-600">
+<a aria-label="Compartir en Facebook" class="hover:text-black transition" href="#">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
+</a>
+<a aria-label="Compartir en X" class="hover:text-black transition" href="#">
+<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</a>
+<a aria-label="Compartir en Pinterest" class="hover:text-black transition" href="#">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.332 1.365-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<!-- Right Column: Product Purchasing Info (Takes 5 cols on LG) -->
+<div class="lg:col-span-5 flex flex-col justify-start">
+<!-- Breadcrumb -->
+<nav aria-label="Migas de pan" class="text-xs text-gray-500 mb-3 space-x-1">
+<a class="hover:text-black" href="#">Inicio</a>
+<span>.</span>
+<a class="hover:text-black" href="#">Accesorios</a>
+<span>.</span>
+<span class="text-gray-800">Funda FUEGOS para Asador</span>
+</nav>
+<!-- Product Title -->
+<h1 class="text-2xl sm:text-3xl font-serif text-gray-900 tracking-wide font-normal mb-3">
+          Funda FUEGOS para Asador
+        </h1>
+<!-- Main Price -->
+<div class="text-xl sm:text-2xl font-normal text-gray-900 mb-1">
+          $179.400,00
+        </div>
+<!-- Transfer Discount Price -->
+<p class="text-sm font-medium text-[#c69a47] mb-2">
+          $161.460,00 con Transferencia o depósito bancario
+        </p>
+<!-- Payment Installment Details -->
+<div class="mb-5 space-y-1">
+<p class="text-xs text-[#d19c3b] font-medium">
+            6 cuotas sin interés de $29.900,00
+          </p>
+<p class="text-xs text-gray-600">
+<span class="text-[#c69a47] font-medium">10% de descuento</span> pagando con Transferencia o depósito bancario
+          </p>
+<a class="text-xs underline text-gray-600 hover:text-black block pt-0.5" href="#">
+            Ver más detalles
+          </a>
+</div>
+<!-- Variant Attribute: Modelo de Asador -->
+<div class="mb-6">
+<label class="block text-xs text-gray-700 font-medium mb-2.5">
+            Modelo de Asador: <span class="text-gray-900 font-semibold">Floki / Odin</span>
+</label>
+<div class="flex flex-wrap gap-2 text-xs">
+<button class="px-3.5 py-1.5 rounded border border-gray-900 bg-white font-medium text-gray-900 shadow-sm">
+              Floki / Odin
+            </button>
+<button class="px-3.5 py-1.5 rounded border border-gray-300 text-gray-700 hover:border-gray-500 bg-white">
+              Parrilla Qatar
+            </button>
+<button class="px-3.5 py-1.5 rounded border border-gray-300 text-gray-700 hover:border-gray-500 bg-white">
+              Ragnar 100/120
+            </button>
+<button class="px-3.5 py-1.5 rounded border border-gray-300 text-gray-700 hover:border-gray-500 bg-white">
+              Ragnar 80
+            </button>
+<button class="px-3.5 py-1.5 rounded border border-gray-300 text-gray-700 hover:border-gray-500 bg-white">
+              Bjorn 120
+            </button>
+<button class="px-3.5 py-1.5 rounded border border-gray-300 text-gray-700 hover:border-gray-500 bg-white">
+              Bjorn 100
+            </button>
+<button class="px-3.5 py-1.5 rounded border border-gray-300 text-gray-700 hover:border-gray-500 bg-white">
+              Bjorn 80
+            </button>
+<button class="px-3.5 py-1.5 rounded border border-gray-300 text-gray-700 hover:border-gray-500 bg-white">
+              Rollo
+            </button>
+</div>
+</div>
+<!-- Scarcity Alert -->
+<div class="text-sm font-medium text-[#c4983e] mb-4">
+          ¡No te lo pierdas, es el último!
+        </div>
+<!-- Quantity & Add to Cart Action -->
+<div class="flex items-center space-x-3 mb-2">
+<!-- Quantity Control -->
+<div class="flex items-center border border-gray-300 rounded bg-white h-11 w-28 justify-between px-3 text-gray-600">
+<button class="hover:text-black font-semibold text-base leading-none focus:outline-none">−</button>
+<span class="text-sm font-medium text-gray-800">1</span>
+<button class="hover:text-black font-semibold text-base leading-none focus:outline-none">+</button>
+</div>
+<!-- Add to Cart CTA Button -->
+<button class="flex-1 h-11 bg-[#dfbd72] hover:bg-[#d4b060] transition-colors duration-200 text-gray-900 font-medium text-sm rounded flex items-center justify-center tracking-wide shadow-sm">
+            Agregar al carrito
+          </button>
+</div>
+<!-- Stock Indicator -->
+<div class="text-xs text-gray-500 mb-8 pl-1">
+          1 en stock
+        </div>
+<!-- Product Short Description -->
+<div class="border-t border-gray-100 pt-6">
+<p class="text-base font-bold text-gray-900 tracking-wide">
+            Cuidá tu asador con nuestras fundas especiales.
+          </p>
+</div>
+</div>
+</div>
+<!-- BEGIN: SimilarProductsSection -->
+<section class="mt-24 mb-16" data-purpose="similar-products">
+<h2 class="text-2xl font-serif text-center text-gray-900 mb-10 tracking-wide">
+        Productos similares
+      </h2>
+<!-- 4 Item Product Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+<!-- Product Card 1 -->
+<article class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-full aspect-square bg-[#fbfbfb] flex items-center justify-center p-4 mb-4 transition duration-300 group-hover:scale-105">
+<img alt="Cruz Libro" class="max-h-full max-w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkwlwkWv0Hs3SleC-XHZg_oE1M2v24sKF_gUTdKoi5B_GncPh5iM0fXRiOBBr15ZNsWqY4PdGYYkblKb72Lf6ci1r6Xa5zPLustN_neRWnnaPZrdUCRhjO3b9VRZ-kN2cPeX1CDSVUc3jGmzNw3U7c2sQfoEyfBweoNXJJcqdvXPk4ZvxSx8vWJsB-LB-vP1B-aloRzaonQMA5mOuQrUAmyM85xcCydVPkyNgPQ8828ZGOj03XEIs-og"/>
+</div>
+<h3 class="text-sm font-medium text-gray-900 mb-1 group-hover:text-brand-accent transition">Cruz Libro</h3>
+<p class="text-sm text-gray-800 font-medium mb-1">$115.200,00</p>
+<p class="text-[11px] text-gray-500 leading-tight">$103.680,00 con Transferencia o depósito bancario</p>
+</article>
+<!-- Product Card 2 -->
+<article class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-full aspect-square bg-[#fbfbfb] flex items-center justify-center p-4 mb-4 transition duration-300 group-hover:scale-105">
+<img alt="Atizador y Avivador Fuegos JL" class="max-h-full max-w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCOsACpHcNUbIWd2JNEofzEze8NY-9JyqYGZQQ1cIMrMiiGc1lFaUJ6RZeB-_8RAsl-b0lWyFadrFKCGHwe-SOtxoxEkn8UihE_CFpOMR937fkwGO2xaJ4kPbQBysR9C8xsMHIRqy7R8wE1oWON0vKK51Czz7VvnXK5soP3HP3tUDBEuT7ZZ1xgJlQPEgh6E8M3hr2YedaJPJTb70Yv65Ly14uOfTdpkVRNtkc9by1ZQgW2yuU2VfXPA"/>
+</div>
+<h3 class="text-sm font-medium text-gray-900 mb-1 group-hover:text-brand-accent transition">Atizador y Avivador Fuegos JL</h3>
+<p class="text-sm text-gray-800 font-medium mb-1">$19.500,00</p>
+<p class="text-[11px] text-gray-500 leading-tight">$17.550,00 con Transferencia o depósito bancario</p>
+</article>
+<!-- Product Card 3 -->
+<article class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-full aspect-square bg-[#fbfbfb] flex items-center justify-center p-4 mb-4 transition duration-300 group-hover:scale-105">
+<img alt="Jaula Oval" class="max-h-full max-w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0xq0u4jRPGZw958_sL6I4otAMN-KEz3TkoEIIVBgnfrHtWtqoLLMvePEvZ5pM03i2Qy8uesLTfkwHE4M6slOS68sWpHAxcKnBPFwetIeVul9GobK4IqNHo4AdLCee7L9vW2yhslhQyPbgbBokG1gZyMKRBKQf3XovZKCu3FJtpZdEg1YeU5gkovX38MYjc_OGXU9IC8ccmOB1hlvJ8SvaFSC9vzIJuioh3BBcXF9rMQDxnpKww2w6xg"/>
+</div>
+<h3 class="text-sm font-medium text-gray-900 mb-1 group-hover:text-brand-accent transition">Jaula Oval</h3>
+<p class="text-sm text-gray-800 font-medium mb-1">$29.200,00</p>
+<p class="text-[11px] text-gray-500 leading-tight">$26.280,00 con Transferencia o depósito bancario</p>
+</article>
+<!-- Product Card 4 -->
+<article class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-full aspect-square bg-[#fbfbfb] flex items-center justify-center p-4 mb-4 transition duration-300 group-hover:scale-105">
+<img alt="Accesorio Parrilla" class="max-h-full max-w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg0eynJw85EQ4dobTXNwvJgwFESjEaFcVW2aYk18F4xoA7EvRBz3OvTh2mW8cfwY-MvyCZYUhDrHhfGGupVqivI7T87o8iZkljBzwGxRyLbl4y2As9P7I2ADjTsNrm-egMq9JuOcY5dzdq1mt-4BayZ4RIdivD5KnvGruPRFPHPPRyiN5inUrA2Fvcs_eNPj-afd0dEn7AbcHIqTvVw4KHGYQ1Ssfwai4jYbvWQGY2fVaKYZaEosy18A"/>
+</div>
+<h3 class="text-sm font-medium text-gray-900 mb-1 group-hover:text-brand-accent transition">Accesorio Parrilla</h3>
+<p class="text-sm text-gray-800 font-medium mb-1">$77.700,00</p>
+<p class="text-[11px] text-gray-500 leading-tight">$69.930,00 con Transferencia o depósito bancario</p>
+</article>
+</div>
+<!-- Carousel Pagination Arrows -->
+<div class="flex justify-center items-center space-x-6 mt-8 text-gray-600">
+<button aria-label="Anterior" class="hover:text-black transition">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</button>
+<button aria-label="Siguiente" class="hover:text-black transition">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</button>
+</div>
+</section>
+<!-- END: SimilarProductsSection -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-[#ebd59a] text-gray-800 pt-12 pb-8 px-4 sm:px-6" data-purpose="site-footer">
+<div class="max-w-4xl mx-auto flex flex-col items-center text-center">
+<!-- Footer Emblem / Logo -->
+<div class="mb-5">
+<img alt="Fuegos JL Logo" class="h-16 w-auto object-contain filter contrast-125" src="https://lh3.googleusercontent.com/aida/AEtjO1U3Rw61yd0PuU8D66z22wskpsb1CFP2CMIcfkjlnPAbe8nyYKjtcxTiMbxTo3f7lQdJMUOogSTaqCarsrdG02jR8KYHgqDNMzlvQ81GbMPIxWE6M5JKf-RtAnKv76xr8yKD_2xbz2n-wOyHixcM3AZ6dh0_yok_XX2B15-Ni93cpN6_Zp208qCnqEiAJJneAijSZEtlOXwSVBwgQTp9G3GpGLJoH4Uo3Ax9uVJ5Kio0fTxaWD1PpS5r4wU"/>
+</div>
+<!-- Social Media Icons -->
+<div class="flex items-center space-x-6 mb-6 text-gray-900">
+<a aria-label="Instagram" class="hover:opacity-75 transition" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a aria-label="Facebook" class="hover:opacity-75 transition" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
+</a>
+<a aria-label="YouTube" class="hover:opacity-75 transition" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+</a>
+<a aria-label="TikTok" class="hover:opacity-75 transition" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.97v7.54c-.03 2.15-.81 4.28-2.3 5.83-1.6 1.68-3.93 2.58-6.24 2.38-2.67-.18-5.11-1.78-6.26-4.17-1.19-2.43-.88-5.46.77-7.58 1.57-2.06 4.19-3.08 6.75-2.61.04 1.39.02 2.78.02 4.17-.98-.12-1.99.1-2.77.72-.88.68-1.32 1.83-1.13 2.92.17 1.12.98 2.05 2.06 2.38 1.09.34 2.32.06 3.12-.73.61-.59.94-1.42.94-2.27V.02h2.8z"></path></svg>
+</a>
+</div>
+<!-- Navigation Links -->
+<nav class="mb-6">
+<ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs font-medium text-gray-800">
+<li><a class="hover:text-black transition" href="#">Inicio</a></li>
+<li><a class="hover:text-black transition" href="#">Productos</a></li>
+<li><a class="hover:text-black transition" href="#">Contacto</a></li>
+<li><a class="hover:text-black transition" href="#">Resto del mundo</a></li>
+<li><a class="hover:text-black transition" href="#">Quiénes Somos</a></li>
+</ul>
+</nav>
+<!-- Newsletter Signup Box -->
+<div class="w-full max-w-md mb-8">
+<form class="flex border border-gray-600/70 rounded overflow-hidden bg-transparent">
+<input class="flex-1 bg-transparent px-3 py-2 text-xs text-gray-800 placeholder-gray-600 focus:outline-none border-none focus:ring-0" placeholder="Suscribite al newsletter..." type="email"/>
+<button class="text-xs px-4 py-2 border-l border-gray-600/70 text-gray-900 font-medium hover:bg-black/5 transition" type="submit">
+            Enviar
+          </button>
+</form>
+</div>
+<!-- Contact Info -->
+<div class="text-xs space-y-1.5 text-gray-800 mb-8 font-normal">
+<p>5491167422899</p>
+<p>+54 9 11 6742-2899</p>
+<p><a class="hover:underline" href="mailto:info@fuegosjl.com">info@fuegosjl.com</a></p>
+<p>Abdon Calderon 1089</p>
+</div>
+<!-- Payment Gateways Logos Bar -->
+<div class="flex flex-wrap justify-center items-center gap-1.5 max-w-xl mb-6">
+<!-- Badge placeholders replicating Visa, Mastercard, AMEX, Banelco, Cabal, etc. -->
+<span class="bg-white px-2 py-0.5 rounded text-[10px] font-bold text-blue-700 shadow-sm border border-gray-200">VISA</span>
+<span class="bg-white px-2 py-0.5 rounded text-[10px] font-bold text-red-600 shadow-sm border border-gray-200">Mastercard</span>
+<span class="bg-white px-2 py-0.5 rounded text-[10px] font-bold text-blue-500 shadow-sm border border-gray-200">AMEX</span>
+<span class="bg-white px-2 py-0.5 rounded text-[10px] font-bold text-blue-600 shadow-sm border border-gray-200">Diners</span>
+<span class="bg-white px-2 py-0.5 rounded text-[10px] font-bold text-red-500 shadow-sm border border-gray-200">Banelco</span>
+<span class="bg-white px-2 py-0.5 rounded text-[10px] font-bold text-orange-600 shadow-sm border border-gray-200">Cabal</span>
+<span class="bg-white px-2 py-0.5 rounded text-[10px] font-bold text-green-600 shadow-sm border border-gray-200">Link</span>
+<span class="bg-white px-2 py-0.5 rounded text-[10px] font-bold text-orange-500 shadow-sm border border-gray-200">NaranjaX</span>
+<span class="bg-white px-2 py-0.5 rounded text-[10px] font-bold text-gray-700 shadow-sm border border-gray-200">PagoFácil</span>
+<span class="bg-white px-2 py-0.5 rounded text-[10px] font-bold text-yellow-600 shadow-sm border border-gray-200">RapiPago</span>
+<span class="bg-white px-2 py-0.5 rounded text-[10px] font-bold text-blue-800 shadow-sm border border-gray-200">Nativa</span>
+<span class="bg-white px-2 py-0.5 rounded text-[10px] font-bold text-blue-400 shadow-sm border border-gray-200">MercadoPago</span>
+</div>
+<!-- Tiendanube Brand Stamp -->
+<div class="text-[11px] text-gray-700 flex items-center justify-center space-x-1 mb-2">
+<span>Creado con</span>
+<span class="font-bold inline-flex items-center">
+<svg class="w-3.5 h-3.5 mr-0.5 fill-current" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+          tiendanube
+        </span>
+</div>
+<!-- Legal / Copyright & Links -->
+<div class="text-[10px] text-gray-700 space-x-1">
+<span>Copyright Fuegos JL - 30716772701 - 2026. Todos los derechos reservados.</span>
+<span>Defensa de las y los consumidores. Para reclamos <a class="underline" href="#">ingresá acá</a>.</span>
+<span>/</span>
+<a class="underline" href="#">Botón de arrepentimiento</a>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+<!-- BEGIN: StickyCookieBanner -->
+<aside class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 text-xs py-2.5 px-4 z-40 shadow-lg text-center text-gray-700" data-purpose="cookie-consent">
+<p class="inline">
+      Al navegar por este sitio <strong>aceptás el uso de cookies</strong> para agilizar tu experiencia de compra.
+    </p>
+<button class="ml-3 underline font-medium text-black hover:text-gray-600 focus:outline-none">
+      Entendido
+    </button>
+</aside>
+<!-- END: StickyCookieBanner -->
+<!-- BEGIN: FloatingWhatsAppButton -->
+<aside class="fixed bottom-12 right-5 z-50" data-purpose="floating-contact">
+<a aria-label="Contactar por WhatsApp" class="w-13 h-13 w-12 h-12 bg-[#25d366] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#20ba59] transition transform hover:scale-110" href="https://wa.me/5491167422899" rel="noopener noreferrer" target="_blank">
+<svg class="w-7 h-7 fill-current" viewbox="0 0 24 24">
+<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+</svg>
+</a>
+</aside>
+<!-- END: FloatingWhatsAppButton -->
+</body></html>

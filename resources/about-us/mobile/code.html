@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Nuestra Historia | Fuegos JL</title>
+<!-- Google Fonts: EB Garamond & Montserrat -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#c5a059',
+              'gold-light': '#dfc285',
+              'gold-dark': '#9b7b3b',
+              surface: '#141311',
+              card: '#1d1b19',
+              cream: '#f9f6f0',
+              beige: '#faf7f2',
+              'footer-gold': '#dec686',
+            }
+          },
+          fontFamily: {
+            serif: ['"EB Garamond"', 'serif'],
+            sans: ['"Montserrat"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="base-styles">
+    body {
+      font-family: 'Montserrat', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      background-color: #ffffff;
+      color: #262626;
+    }
+    .font-garamond {
+      font-family: 'EB Garamond', serif;
+    }
+    /* Infinite ticker animation */
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-ticker {
+      display: inline-flex;
+      white-space: nowrap;
+      animation: ticker 25s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#ffffff] text-[#2b2b2b] antialiased selection:bg-[#c5a059] selection:text-white">
+<!-- BEGIN: TopPromoTicker -->
+<div class="bg-black text-white text-[10px] tracking-wider uppercase py-2 overflow-hidden border-b border-neutral-900 select-none z-50 relative" data-purpose="announcement-bar">
+<div class="animate-ticker flex items-center space-x-6 whitespace-nowrap">
+<span>💳 10% OFF PAGANDO CON TRANSFERENCIA</span>
+<span class="text-neutral-500">•</span>
+<span>📦 ENVÍOS A TODO EL PAÍS 🇦🇷</span>
+<span class="text-neutral-500">•</span>
+<span>⚡ HASTA 6 CUOTAS SIN INTERÉS</span>
+<span class="text-neutral-500">•</span>
+<span>💳 10% OFF PAGANDO CON TRANSFERENCIA</span>
+<span class="text-neutral-500">•</span>
+<span>📦 ENVÍOS A TODO EL PAÍS 🇦🇷</span>
+<span class="text-neutral-500">•</span>
+<span>⚡ HASTA 6 CUOTAS SIN INTERÉS</span>
+<span class="text-neutral-500">•</span>
+</div>
+</div>
+<!-- END: TopPromoTicker -->
+<!-- BEGIN: MobileHeader -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-stone-200" data-purpose="main-navigation">
+<div class="max-w-md mx-auto px-4 h-16 flex items-center justify-between">
+<!-- Left: Mobile Menu Trigger -->
+<button aria-label="Abrir menú de navegación" class="p-2 -ml-2 text-stone-800 hover:text-[#c5a059] transition-colors focus:outline-none" type="button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Center: Emblem Logo -->
+<a class="flex items-center justify-center -ml-2" data-purpose="brand-logo" href="#">
+<img alt="Fuegos JL Logotipo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U3Rw61yd0PuU8D66z22wskpsb1CFP2CMIcfkjlnPAbe8nyYKjtcxTiMbxTo3f7lQdJMUOogSTaqCarsrdG02jR8KYHgqDNMzlvQ81GbMPIxWE6M5JKf-RtAnKv76xr8yKD_2xbz2n-wOyHixcM3AZ6dh0_yok_XX2B15-Ni93cpN6_Zp208qCnqEiAJJneAijSZEtlOXwSVBwgQTp9G3GpGLJoH4Uo3Ax9uVJ5Kio0fTxaWD1PpS5r4wU"/>
+</a>
+<!-- Right: User & Cart Actions -->
+<div class="flex items-center space-x-2">
+<button aria-label="Buscar" class="p-2 text-stone-700 hover:text-[#c5a059] transition-colors" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<button aria-label="Mi Cuenta" class="p-2 text-stone-700 hover:text-[#c5a059] transition-colors hidden xs:block" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<a aria-label="Carrito de compras" class="p-2 -mr-2 text-stone-700 relative hover:text-[#c5a059] transition-colors" href="#cart">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25c-.67 0-1.189-.578-1.119-1.243l1.263-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="absolute top-1 right-1 text-[9px] font-semibold bg-[#c5a059] text-white rounded-full w-3.5 h-3.5 flex items-center justify-center">0</span>
+</a>
+</div>
+</div>
+</header>
+<!-- END: MobileHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative min-h-[380px] flex items-center justify-center text-center overflow-hidden" data-purpose="hero-banner">
+<!-- Hero Background Image (Lake and Asado scenery) -->
+<div class="absolute inset-0 z-0">
+<img alt="Encuentro de asado junto a las brasas" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMqSvYKyHlMceDHhidgcRowWJb8MMC-1a17MJ-nqd3UwCfNIzVqIjydHKdmJgbuCcEo8rjHJMiKKlLocO113WkCEUyCXuw363R6zRr8QVEpfgpvXUL4k_H1dMhIj2RPKYcUt7spmECB8rU2ZjLF0yPIns46ZdODygjJzlHLzIb1kx4XGxlGI8f9dnljPkzvE0RYZQyv1hAEKgdPoqC3KJOXK4mOqJL_HOUoRc-fY1zMyr-UamCLEmYOw"/>
+<!-- Dramatic Dark Ambient Vignette -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/75 via-black/60 to-black/85"></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 px-6 py-14 max-w-sm mx-auto flex flex-col items-center">
+<span class="text-xs uppercase tracking-[0.25em] text-[#c5a059] font-medium mb-3">FUEGOS JL</span>
+<h1 class="font-garamond text-4xl sm:text-5xl text-white font-normal tracking-wide leading-tight mb-4">
+        Nuestra Historia
+      </h1>
+<div class="w-12 h-[2px] bg-[#c5a059]"></div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: FounderQuote -->
+<section class="px-6 py-12 bg-white text-center max-w-md mx-auto" data-purpose="founder-quote">
+<blockquote class="font-garamond text-xl sm:text-2xl italic leading-relaxed text-stone-800 tracking-wide font-normal">
+      “Hoy todos queremos un Fuegos JL que nos una, nos conecte y nos permita disfrutar el momento.”
+    </blockquote>
+<p class="mt-4 text-[11px] font-semibold tracking-[0.25em] uppercase text-[#c5a059]">
+      - JULIÁN, FUNDADOR
+    </p>
+</section>
+<!-- END: FounderQuote -->
+<!-- BEGIN: StoryChapters -->
+<main class="max-w-md mx-auto px-4 space-y-10 pb-12" data-purpose="history-narrative">
+<!-- Chapter 1: Como empezo todo -->
+<article class="space-y-4" data-purpose="story-chapter-1">
+<!-- Founder Photo in Workshop -->
+<div class="rounded-sm overflow-hidden shadow-sm bg-neutral-100 aspect-[4/3]">
+<img alt="Julián en el taller de herrería junto al primer asador" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA-1qG4xG9NBKCBOiOQjW_cPunI4Fa4jRKxFefV9HTrP1WBO5ej7SOc1v-7aveV8SbP5xYC10KRMxaTX-Bc37LpFMJYb3wSqFjYa5z_9qtaUNMIyp5f5OPgLomo2udxMD3iNibgbqr9vtlj61IneqqERztbta6E0zRN8rjMOiZXme716gIWYa1TB46A1ZbfkfLKsoFn2StND1pKN3PgRMtzqqpjcLK7asxjd_kBFu-G24JdQZpFB06vQ"/>
+</div>
+<!-- Chapter 1 Card -->
+<div class="bg-[#faf7f2] p-6 sm:p-7 border-l-2 border-[#c5a059] rounded-r-sm">
+<span class="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#c5a059] block mb-2">
+          COMO EMPEZÓ TODO
+        </span>
+<h2 class="font-garamond text-2xl text-stone-900 font-normal leading-snug mb-3">
+          Casi sin querer
+        </h2>
+<div class="text-[13px] leading-relaxed text-stone-600 space-y-3 font-normal">
+<p>
+            Mi nombre es Julián. Fuegos JL nació a principios de 2018, casi sin querer y sin un plan.
+          </p>
+<p>
+            Desde chico, el fuego me atrae y me hipnotiza. Siempre fui amante de la buena comida y de crear con las manos. Uniendo estas tres pasiones, armé mi primer asador — un proyecto que me llevó ocho meses terminar, y que valió cada uno.
+          </p>
+</div>
+</div>
+</article>
+<!-- Chapter 2: El punto de encuentro -->
+<article class="space-y-4" data-purpose="story-chapter-2">
+<!-- Workshop Welder Photo with camera recording -->
+<div class="rounded-sm overflow-hidden shadow-sm bg-neutral-900 aspect-[4/3]">
+<img alt="Artesano soldador forjando piezas de asadores Fuegos JL" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHQD1qypKctY213cJdQLdyBl_EdMkBM-VpmM4CEhmvdhTUUKSL7xD-cAUeShBoXaJ_1OKLR43ulHePXApkVt7CEOEaREDGfkkHZg8-kqgM5eBqGU3355Tmx6sZ02Vlukmrkpu2Vp2woRVquIzqw1vBqgfz4OALH4mhKFgi0Uw7CLsysawv3hkrA2FGXOsHLAzDmLVA4jE7tES5YxbHs3eOUxSFfmbkWhKE0vtSSPb4Qq_7f6dEP91PEw"/>
+</div>
+<!-- Chapter 2 Card (Dark Theme) -->
+<div class="bg-[#171614] text-white p-6 sm:p-7 border-l-2 border-[#c5a059] rounded-r-sm shadow-md">
+<span class="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#c5a059] block mb-2">
+          EL PUNTO DE ENCUENTRO
+        </span>
+<h2 class="font-garamond text-2xl text-stone-100 font-normal leading-snug mb-3">
+          Compartir el fuego
+        </h2>
+<div class="text-[13px] leading-relaxed text-stone-300 space-y-3 font-light">
+<p>
+            Mi familia y amigos lo disfrutaron tanto como yo. Esa experiencia compartida nos llevó a pensar en algo más grande: hacer un asador para el club donde me crié.
+          </p>
+<p>
+            Así nació el segundo. Y después de varios encuentros donde el asador fue el centro de la reunión — de las charlas, la comida y el fuego — entendí que de todo eso había nacido algo nuevo: un proyecto de verdad.
+          </p>
+</div>
+</div>
+</article>
+</main>
+<!-- END: StoryChapters -->
+<!-- BEGIN: Qatar2022Section -->
+<section class="bg-[#121110] text-white py-14 px-4 text-center border-y border-stone-800" data-purpose="qatar-achievement">
+<div class="max-w-md mx-auto">
+<!-- Golden Stars Badge -->
+<div class="flex justify-center items-center space-x-1.5 text-[#c5a059] text-sm mb-3">
+<span>★</span>
+<span>★</span>
+<span>★</span>
+</div>
+<span class="text-[10px] uppercase tracking-[0.25em] text-[#c5a059] font-medium block mb-2">
+        UN ORGULLO INMENSO
+      </span>
+<h2 class="font-garamond text-3xl font-normal text-stone-100 mb-4 tracking-wide">
+        Elegidos para ir a Qatar
+      </h2>
+<p class="text-[13px] leading-relaxed text-stone-300 max-w-xs mx-auto mb-8 font-light">
+        En el Mundial de 2022, nuestra "Parrilla Qatar" cruzó el océano para acompañar uno de los momentos más emocionantes del fútbol argentino. Un orgullo enorme que resume todo lo que buscamos: estar presentes en los grandes encuentros que la gente nunca olvida.
+      </p>
+<!-- Panoramic Team & Qatar Grill Photo -->
+<div class="rounded-sm overflow-hidden shadow-2xl border border-stone-800/80 bg-stone-900">
+<img alt="El equipo de artesanos de Fuegos JL junto a la parrilla enviada a Qatar" class="w-full h-56 xs:h-64 object-cover object-center filter contrast-[1.05]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_lYVsI94Vd2VyafLcwfIbNFd3Imiig6P7NRauj19FctvurHeTSElBMHKsZ_C4QO3FSJ0IlfN_mkcQEvs7H3sePJwWdEiCnClMWr6Qtvt8t7fed_aDPuxRwc0_x38lLW_z_7kXcEng1Ov69DvChNzfAgHdYV3aAu2MGE6ksqznDk3exk6NRAjZLFSy9K1ZXqfPuBC_AQmdNw7Pu_EqXiro8lsiUWo17-SKCPBwBCvDibfzZTLuoWwPww"/>
+</div>
+</div>
+</section>
+<!-- END: Qatar2022Section -->
+<!-- BEGIN: PhilosophyAndCTA -->
+<section class="py-14 px-6 bg-white text-center max-w-md mx-auto" data-purpose="brand-philosophy-cta">
+<span class="text-[10px] uppercase tracking-[0.25em] text-[#c5a059] font-medium block mb-2">
+      HOY
+    </span>
+<h2 class="font-garamond text-3xl font-normal text-stone-900 mb-5">
+      Más que un asador
+    </h2>
+<div class="text-[13px] text-stone-600 leading-relaxed space-y-4 mb-8 font-normal">
+<p>
+        Cada Fuegos JL nace de las mismas pasiones de siempre: el fuego, la creatividad y la buena comida. Pero sobre todo, nace de algo más profundo — la idea de reunirnos alrededor de lo que nos une y nos invita a disfrutar el momento.
+      </p>
+<p>
+        Lo que empezó con un asador hecho a mano hoy es un equipo de más de 30 personas que trabajamos como una gran familia. Compartimos el mismo fuego que nos mueve desde el día uno, y lo ponemos en cada pieza que sale de nuestro taller.
+      </p>
+</div>
+<!-- CTA Button -->
+<div>
+<a class="inline-block w-full py-3.5 px-6 bg-[#1a1917] hover:bg-[#c5a059] text-white text-[11px] font-semibold tracking-[0.2em] uppercase transition-all duration-300 rounded-sm shadow-md active:scale-[0.98]" data-purpose="explore-catalog-btn" href="#">
+        CONOCÉ NUESTROS PRODUCTOS
+      </a>
+</div>
+</section>
+<!-- END: PhilosophyAndCTA -->
+<!-- BEGIN: MobileFooter -->
+<footer class="bg-[#dec686] text-stone-900 pt-10 pb-20 px-6 text-center text-xs" data-purpose="brand-footer">
+<div class="max-w-md mx-auto space-y-7">
+<!-- Footer Brand Insignia -->
+<div class="flex justify-center">
+<img alt="Sello Fuegos JL" class="h-14 w-auto object-contain brightness-95" src="https://lh3.googleusercontent.com/aida/AEtjO1U3Rw61yd0PuU8D66z22wskpsb1CFP2CMIcfkjlnPAbe8nyYKjtcxTiMbxTo3f7lQdJMUOogSTaqCarsrdG02jR8KYHgqDNMzlvQ81GbMPIxWE6M5JKf-RtAnKv76xr8yKD_2xbz2n-wOyHixcM3AZ6dh0_yok_XX2B15-Ni93cpN6_Zp208qCnqEiAJJneAijSZEtlOXwSVBwgQTp9G3GpGLJoH4Uo3Ax9uVJ5Kio0fTxaWD1PpS5r4wU"/>
+</div>
+<!-- Social Media Links -->
+<div class="flex justify-center space-x-6 text-stone-800" data-purpose="social-icons">
+<!-- Instagram -->
+<a aria-label="Instagram" class="hover:text-black transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+</svg>
+</a>
+<!-- Facebook -->
+<a aria-label="Facebook" class="hover:text-black transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+<path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.667 5H18V0h-3.808C10.597 0 9 1.583 9 4.615V8z"></path>
+</svg>
+</a>
+<!-- YouTube -->
+<a aria-label="YouTube" class="hover:text-black transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+</svg>
+</a>
+<!-- TikTok -->
+<a aria-label="TikTok" class="hover:text-black transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.16 1.18 2.09 2.35 2.29.93.18 1.91-.06 2.66-.64.55-.42.92-1.03 1.05-1.71.09-.43.11-.87.11-1.31-.01-4.99-.01-9.98-.01-14.97z"></path>
+</svg>
+</a>
+</div>
+<!-- Navigation Links -->
+<nav class="flex flex-wrap justify-center gap-x-4 gap-y-1 text-[11px] font-medium text-stone-800">
+<a class="hover:underline" href="#">Inicio</a>
+<a class="hover:underline" href="#">Productos</a>
+<a class="hover:underline" href="#">Contacto</a>
+<a class="hover:underline" href="#">Resto del mundo</a>
+<a class="hover:underline font-bold" href="#">Quiénes Somos</a>
+</nav>
+<!-- Newsletter Box -->
+<div class="pt-1">
+<form class="flex max-w-xs mx-auto border border-stone-800/40 bg-white/30 backdrop-blur-sm rounded overflow-hidden" onsubmit="event.preventDefault();">
+<input aria-label="Correo electrónico para newsletter" class="w-full text-xs px-3 py-2 bg-transparent text-stone-900 placeholder-stone-600 border-none focus:ring-0 focus:outline-none" placeholder="Suscribite al newsletter..." type="email"/>
+<button class="px-3 text-xs font-semibold uppercase tracking-wider text-stone-900 hover:text-stone-700 transition-colors border-l border-stone-800/20" type="submit">
+            Enviar
+          </button>
+</form>
+</div>
+<!-- Contact Info -->
+<div class="space-y-1 text-[11px] text-stone-800 font-medium">
+<p>5491167422899</p>
+<p>+54 9 11 6742-2899</p>
+<p><a class="hover:underline" href="mailto:info@fuegosjl.com">info@fuegosjl.com</a></p>
+<p>Abdón Calderón 1089</p>
+</div>
+<!-- Payment Gateways Logos (Simulated clean row) -->
+<div class="pt-1">
+<div class="flex flex-wrap items-center justify-center gap-1.5 opacity-80 max-w-xs mx-auto text-[9px] font-bold text-stone-700">
+<span class="bg-white/80 px-2 py-0.5 rounded shadow-2xs">VISA</span>
+<span class="bg-white/80 px-2 py-0.5 rounded shadow-2xs">Mastercard</span>
+<span class="bg-white/80 px-2 py-0.5 rounded shadow-2xs">AMEX</span>
+<span class="bg-white/80 px-2 py-0.5 rounded shadow-2xs">Cabal</span>
+<span class="bg-white/80 px-2 py-0.5 rounded shadow-2xs">MercadoPago</span>
+<span class="bg-white/80 px-2 py-0.5 rounded shadow-2xs">Naranja</span>
+<span class="bg-white/80 px-2 py-0.5 rounded shadow-2xs">Transferencia</span>
+</div>
+</div>
+<!-- Legal and platform notice -->
+<div class="text-[9px] text-stone-700 pt-2 border-t border-stone-800/15 space-y-1">
+<p class="font-medium">creado con <span class="font-bold">Tiendanube</span></p>
+<p>Copyright Fuegos JL - 30716772701 - 2026. Todos los derechos reservados.</p>
+<p class="text-[8.5px]">
+          Defensa de las y los consumidores. Para reclamos <a class="underline" href="#">ingresá acá</a> / <a class="underline" href="#">Botón de arrepentimiento</a>
+</p>
+</div>
+</div>
+</footer>
+<!-- END: MobileFooter -->
+<!-- BEGIN: FloatingWhatsApp -->
+<div class="fixed bottom-4 right-4 z-50" data-purpose="floating-contact">
+<a aria-label="Contactar por WhatsApp" class="w-13 h-13 p-3 bg-[#25D366] text-white rounded-full shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-transform" href="https://wa.me/5491167422899" rel="noopener noreferrer" target="_blank">
+<svg class="w-7 h-7 fill-current" viewbox="0 0 24 24">
+<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+</svg>
+</a>
+</div>
+<!-- END: FloatingWhatsApp -->
+<!-- BEGIN: CookieConsentStickyBar -->
+<aside class="fixed bottom-0 inset-x-0 bg-stone-900/95 backdrop-blur-md text-stone-300 text-[10px] py-2.5 px-4 text-center z-40 border-t border-stone-800" data-purpose="cookie-notice">
+<div class="max-w-md mx-auto flex items-center justify-between gap-2">
+<span class="truncate">Al navegar por este sitio <strong class="text-white">aceptás el uso de cookies</strong>.</span>
+<button class="text-[#c5a059] hover:underline font-semibold shrink-0 uppercase tracking-wider text-[9px] px-2 py-1 bg-stone-800 rounded" onclick="this.parentElement.parentElement.remove()">
+        Entendido
+      </button>
+</div>
+</aside>
+<!-- END: CookieConsentStickyBar -->
+</body></html>
