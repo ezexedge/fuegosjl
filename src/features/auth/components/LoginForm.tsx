@@ -46,6 +46,7 @@ export function LoginForm() {
           Panel de administración
         </Typography>
         {error ? <Alert severity="error">{error}</Alert> : null}
+        <input type="text" name="username" autoComplete="username" value="admin" readOnly hidden />
         <TextField
           label="Contraseña"
           type="password"
