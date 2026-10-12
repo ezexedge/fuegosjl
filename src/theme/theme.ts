@@ -10,7 +10,7 @@ import {
 } from "./tokens";
 
 export const theme = createTheme({
-  cssVariables: { colorSchemeSelector: "data" },
+  cssVariables: { colorSchemeSelector: '[data-mui-color-scheme="%s"]' },
   defaultColorScheme: "light",
   colorSchemes: {
     light: { palette: palette.light },
@@ -25,6 +25,13 @@ export const theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
+        // Tokens que MUI no expone como variables CSS (usables desde Server Components).
+        ":root": {
+          "--shadow-card": shadows.card,
+          "--shadow-glow-gold": shadows.glowGold,
+          "--shadow-glow-ember": shadows.glowEmber,
+          "--radius-pill": `${shape.borderRadiusPill}px`,
+        },
         body: { WebkitFontSmoothing: "antialiased" },
       },
     },

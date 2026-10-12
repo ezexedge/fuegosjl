@@ -27,5 +27,20 @@ export const site = {
     { label: "TikTok", href: "#" },
   ],
   payments: ["VISA", "Mastercard", "AMEX", "Naranja", "Cabal", "Argencard", "PagoFácil", "RapiPago", "Banelco"],
+  darkFooter: {
+    tagline: "Herrería de autor y cultura gastronómica.",
+    address: "Abdon Calderon 1089, Buenos Aires, Argentina.",
+    legalLinks: [
+      "Términos y Condiciones",
+      "Políticas de Envíos",
+      "Garantía y Devoluciones",
+      "Defensa de las y los Consumidores",
+      "Parrilla Qatar 2022 Oficial",
+      "Sucursales",
+    ],
+    payments: ["Visa", "Mastercard", "AMEX", "Mercado Pago", "Transferencia"],
+    copyright: "© 2024 Fuegos JL. Todos los derechos reservados. Industria Argentina.",
+    cuit: "CUIT 30-71677270-1",
+  },
   legal: "Copyright Fuegos JL - 30716772701 - 2026. Todos los derechos reservados.",
 } as const;

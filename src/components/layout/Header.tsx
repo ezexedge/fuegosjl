@@ -15,6 +15,7 @@ import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import MuiLink from "@mui/material/Link";
 import { site } from "@/lib/site";
+import { ColorModeToggle } from "./ColorModeToggle";
 import { NavLinks } from "./NavLinks";
 
 export function Header() {
@@ -69,6 +70,7 @@ export function Header() {
           </MuiLink>
 
           <Box sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 1 }}>
+            <ColorModeToggle />
             <IconButton aria-label="Buscar productos" component={Link} href="/productos" sx={{ display: { md: "none" } }}>
               <SearchIcon />
             </IconButton>

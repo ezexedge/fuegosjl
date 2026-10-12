@@ -13,6 +13,7 @@ export function AnnouncementBar() {
         color: "secondary.contrastText",
         overflow: "hidden",
         py: 2,
+        "[data-mui-color-scheme='dark'] &": { bgcolor: "background.paper", color: "primary.main" },
         "&:hover > div": { animationPlayState: "paused" },
       }}
     >
