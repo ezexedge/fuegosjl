@@ -1,15 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import InitColorSchemeScript from "@mui/material/InitColorSchemeScript";
+import { fontClassNames } from "@/theme/fonts";
+import { ThemeRegistry } from "@/theme/ThemeRegistry";
 
 export const metadata: Metadata = {
   title: "Parrilla",
@@ -18,8 +10,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+    <html lang="es" className={fontClassNames} suppressHydrationWarning>
+      <body>
+        <InitColorSchemeScript
+          attribute="data-mui-color-scheme"
+          defaultMode="light"
+        />
+        <ThemeRegistry>{children}</ThemeRegistry>
+      </body>
     </html>
   );
 }
