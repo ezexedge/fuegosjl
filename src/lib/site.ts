@@ -10,7 +10,7 @@ export const site = {
   nav: [
     { label: "Inicio", href: "/" },
     { label: "Productos", href: "/productos" },
-    { label: "Contacto", href: "#" },
+    { label: "Contacto", href: "/contacto" },
     { label: "Resto del mundo", href: "#" },
     { label: "Quiénes Somos", href: "/quienes-somos" },
   ],
