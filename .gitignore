@@ -44,3 +44,11 @@ next-env.d.ts
 # credenciales de desarrollo
 CLAUDE.md
 claude.md
+
+# editores y herramientas locales
+.vscode/
+.idea/
+.claude/
+*.log
+*.swp
+Thumbs.db
