@@ -72,4 +72,4 @@ Respuestas con formato `{ data, error }`.
 
 ## Pendiente / fuera de alcance
 
-La página de Contacto no guarda mensajes (no hay tabla para eso): abre el cliente de correo hacia `info@fuegosjl.com`, y no incluye reCAPTCHA. Carrito, checkout, login de clientes y cuenta de usuario no tienen diseño en `resources/` y no están implementados. El botón "Agregar al carrito" del detalle muestra un aviso.
+El formulario de Contacto tiene diseño y validación, pero por ahora no envía ni guarda mensajes (no hay tabla ni servicio de correo) y no incluye reCAPTCHA. Carrito, checkout, login de clientes y cuenta de usuario no tienen diseño en `resources/` y no están implementados. El botón "Agregar al carrito" del detalle muestra un aviso.

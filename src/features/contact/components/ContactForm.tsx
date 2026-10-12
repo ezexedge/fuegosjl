@@ -7,17 +7,7 @@ import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { site } from "@/lib/site";
 import { contactFormSchema, type ContactFormValues } from "../schemas";
-
-/** No hay backend de mensajes: se arma un correo a la casilla de contacto. */
-function buildMailto(values: ContactFormValues): string {
-  const subject = `Consulta de ${values.name}`;
-  const lines = [values.message, "", `Nombre: ${values.name}`, `Email: ${values.email}`];
-  if (values.phone) lines.push(`Teléfono: ${values.phone}`);
-  const body = lines.join("\n");
-  return `mailto:${site.contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
 
 export function ContactForm() {
   const [sent, setSent] = useState(false);
@@ -30,10 +20,8 @@ export function ContactForm() {
     defaultValues: { name: "", email: "", phone: "", message: "" },
   });
 
-  const onSubmit = handleSubmit((values) => {
-    window.location.assign(buildMailto(values));
-    setSent(true);
-  });
+  // Por ahora el formulario solo valida: no envía ni guarda el mensaje.
+  const onSubmit = handleSubmit(() => setSent(true));
 
   return (
     <Box component="form" onSubmit={onSubmit} noValidate sx={{ display: "grid", gap: 5, width: "100%", maxWidth: 560 }}>
@@ -77,8 +65,8 @@ export function ContactForm() {
         {...register("message")}
       />
       {sent ? (
-        <Alert severity="success" role="status">
-          Se abrió tu aplicación de correo con el mensaje listo para enviar a {site.contact.email}.
+        <Alert severity="info" role="status">
+          Por el momento el formulario no envía mensajes. Escribinos por WhatsApp o por email.
         </Alert>
       ) : null}
       <Box sx={{ display: "flex", justifyContent: "center" }}>
