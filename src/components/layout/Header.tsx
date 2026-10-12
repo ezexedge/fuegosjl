@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import MenuIcon from "@mui/icons-material/Menu";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
@@ -14,18 +13,11 @@ import Container from "@mui/material/Container";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MuiLink from "@mui/material/Link";
 import { site } from "@/lib/site";
-
-function isActive(pathname: string, href: string): boolean {
-  if (href === "/") return pathname === "/";
-  return href !== "#" && pathname.startsWith(href);
-}
+import { NavLinks } from "./NavLinks";
 
 export function Header() {
-  const pathname = usePathname();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
@@ -91,47 +83,12 @@ export function Header() {
           </Box>
         </Box>
 
-        <Box
-          component="nav"
-          aria-label="Navegación principal"
-          sx={{ display: { xs: "none", md: "flex" }, justifyContent: "center", gap: 8, pb: 3 }}
-        >
-          {site.nav.map((item) => (
-            <MuiLink
-              key={item.label}
-              component={Link}
-              href={item.href}
-              variant="body2"
-              underline="none"
-              aria-current={isActive(pathname, item.href) ? "page" : undefined}
-              sx={{
-                color: isActive(pathname, item.href) ? "text.primary" : "text.secondary",
-                fontWeight: isActive(pathname, item.href) ? 600 : 400,
-                borderBottom: 1,
-                borderColor: isActive(pathname, item.href) ? "text.primary" : "transparent",
-                pb: 0.5,
-                "&:hover": { color: "text.primary" },
-              }}
-            >
-              {item.label}
-            </MuiLink>
-          ))}
-        </Box>
+        <NavLinks variant="bar" />
       </Container>
 
       <Drawer anchor="left" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
         <List sx={{ width: 260, pt: 6 }} component="nav" aria-label="Navegación principal">
-          {site.nav.map((item) => (
-            <ListItemButton
-              key={item.label}
-              component={Link}
-              href={item.href}
-              selected={isActive(pathname, item.href)}
-              onClick={() => setDrawerOpen(false)}
-            >
-              <ListItemText primary={item.label} />
-            </ListItemButton>
-          ))}
+          <NavLinks variant="list" onNavigate={() => setDrawerOpen(false)} />
         </List>
       </Drawer>
     </Box>

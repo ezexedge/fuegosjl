@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { AppLink } from "@/components/ui/AppLink";
+import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { RemoteImage } from "@/components/ui/RemoteImage";
 import { formatPrice, transferPrice } from "@/lib/format";
 import type { ProductWithRelations } from "../types";
@@ -34,7 +35,9 @@ export function ProductCard({ product }: ProductCardProps) {
             sizes="(min-width: 1024px) 25vw, 50vw"
             style={{ objectFit: "contain", padding: 16 }}
           />
-        ) : null}
+        ) : (
+          <ImagePlaceholder />
+        )}
       </Box>
       <Typography className="product-name" variant="body2" component="h2" sx={{ transition: "color 0.2s" }}>
         {product.name}

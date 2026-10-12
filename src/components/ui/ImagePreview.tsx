@@ -4,6 +4,7 @@ import Image from "next/image";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
+import { IMAGE_URL_PATTERN } from "@/lib/schemas";
 
 interface ImagePreviewProps {
   url: string;
@@ -11,14 +12,14 @@ interface ImagePreviewProps {
   size?: number;
 }
 
-function isHttpUrl(value: string): boolean {
-  return /^https?:\/\/\S+$/i.test(value);
+function isValidUrl(value: string): boolean {
+  return IMAGE_URL_PATTERN.test(value);
 }
 
 /** Vista previa de una imagen por URL. Con `key={url}` se reinicia el estado de error. */
 export function ImagePreview({ url, alt, size = 80 }: ImagePreviewProps) {
   const [failed, setFailed] = useState(false);
-  const valid = isHttpUrl(url) && !failed;
+  const valid = isValidUrl(url) && !failed;
   return (
     <Box
       sx={{

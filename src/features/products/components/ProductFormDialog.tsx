@@ -247,7 +247,12 @@ export function ProductFormDialog({
                   helperText={errors.attributes?.[index]?.key?.message}
                   {...register(`attributes.${index}.key`)}
                 />
-                <TextField label="Valor" fullWidth {...register(`attributes.${index}.value`)} />
+                <TextField
+                  label="Valor"
+                  fullWidth
+                  helperText="Para ofrecer opciones seleccionables, separalas con |"
+                  {...register(`attributes.${index}.value`)}
+                />
                 <IconButton aria-label="Quitar atributo" onClick={() => attributes.remove(index)}>
                   <CloseIcon />
                 </IconButton>

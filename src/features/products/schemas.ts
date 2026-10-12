@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { imageUrlSchema, paginationSchema, slugSchema } from "@/lib/schemas";
+import { IMAGE_URL_MESSAGE, IMAGE_URL_PATTERN, imageUrlSchema, paginationSchema, slugSchema } from "@/lib/schemas";
 
 export const productImageInputSchema = z.object({
   url: imageUrlSchema,
@@ -54,7 +54,7 @@ export const productFormSchema = z.object({
   images: z
     .array(
       z.object({
-        url: z.string().trim().refine((v) => /^https?:\/\/\S+$/i.test(v), "Debe ser una URL http(s)"),
+        url: z.string().trim().regex(IMAGE_URL_PATTERN, IMAGE_URL_MESSAGE),
         alt: z.string().trim().max(200),
       }),
     )

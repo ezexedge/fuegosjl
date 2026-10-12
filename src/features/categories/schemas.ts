@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { imageUrlSchema, paginationSchema, slugSchema } from "@/lib/schemas";
+import { IMAGE_URL_MESSAGE, IMAGE_URL_PATTERN, imageUrlSchema, paginationSchema, slugSchema } from "@/lib/schemas";
 
 export const categoryInputSchema = z.object({
   name: z.string().trim().min(1, "El nombre es obligatorio").max(120),
@@ -29,7 +29,7 @@ export const categoryFormSchema = z.object({
   imageUrl: z
     .string()
     .trim()
-    .refine((v) => v === "" || /^https?:\/\/\S+$/i.test(v), "Debe ser una URL http(s)"),
+    .refine((v) => v === "" || IMAGE_URL_PATTERN.test(v), IMAGE_URL_MESSAGE),
   sortOrder: z.number({ error: "Ingresá un número" }).int("Debe ser entero").min(0, "No puede ser negativo"),
   isActive: z.boolean(),
 });

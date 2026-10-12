@@ -15,3 +15,13 @@ export function pesosToCents(pesos: number): number {
 export function centsToPesos(cents: number): number {
   return cents / 100;
 }
+
+/** Separador de opciones seleccionables dentro del valor de un atributo. */
+export const ATTRIBUTE_OPTIONS_SEPARATOR = "|";
+
+export function parseAttributeOptions(value: string): string[] {
+  return value
+    .split(ATTRIBUTE_OPTIONS_SEPARATOR)
+    .map((o) => o.trim())
+    .filter(Boolean);
+}

@@ -7,10 +7,11 @@ export const slugSchema = z
   .max(160)
   .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Solo minúsculas, números y guiones");
 
-export const imageUrlSchema = z
-  .string()
-  .max(2000)
-  .refine((v) => /^https?:\/\//i.test(v), "Debe ser una URL http(s)");
+/** URL http(s) o ruta local que empiece con `/` (archivos de `public/`). */
+export const IMAGE_URL_PATTERN = /^(https?:\/\/|\/(?!\/))\S+$/i;
+export const IMAGE_URL_MESSAGE = "Debe ser una URL http(s) o una ruta que empiece con /";
+
+export const imageUrlSchema = z.string().max(2000).regex(IMAGE_URL_PATTERN, IMAGE_URL_MESSAGE);
 
 export const paginationSchema = z.object({
   page: z.coerce.number().int().min(1).default(1),
