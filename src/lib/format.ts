@@ -7,7 +7,7 @@ const formatter = new Intl.NumberFormat(config.locale, {
 
 /** Formatea un monto en centavos como moneda. */
 export function formatPrice(cents: number): string {
-  return formatter.format(cents / 100);
+  return formatter.format(cents / 100).replace(/\s/g, "");
 }
 
 /** Precio con descuento por transferencia, en centavos. */

@@ -141,3 +141,18 @@ export async function deleteProduct(id: number) {
   if (!row) throw notFound("Producto");
   return row;
 }
+
+export interface CategoryFilterOption {
+  id: number;
+  name: string;
+  slug: string;
+}
+
+/** Categorías activas para el filtro público del listado. */
+export async function listCategoryFilterOptions(): Promise<CategoryFilterOption[]> {
+  return db
+    .select({ id: categories.id, name: categories.name, slug: categories.slug })
+    .from(categories)
+    .where(eq(categories.isActive, true))
+    .orderBy(asc(categories.sortOrder), asc(categories.name));
+}
