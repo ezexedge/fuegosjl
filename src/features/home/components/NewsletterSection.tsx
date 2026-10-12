@@ -20,7 +20,7 @@ export function NewsletterSection() {
 
   return (
     <Container component="section" maxWidth="md" sx={{ py: { xs: 14, md: 20 }, textAlign: "center", display: "grid", gap: 4, justifyItems: "center" }}>
-      <MailOutlinedIcon sx={{ color: "primary.main", fontSize: 32 }} />
+      <MailOutlinedIcon fontSize="large" sx={{ color: "primary.main" }} />
       <Typography variant="h3" component="h2">
         {newsletter.title}
       </Typography>
