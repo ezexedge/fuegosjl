@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import InitColorSchemeScript from "@mui/material/InitColorSchemeScript";
 import { fontClassNames } from "@/theme/fonts";
+import { QueryProvider } from "@/lib/QueryProvider";
 import { ThemeRegistry } from "@/theme/ThemeRegistry";
 
 export const metadata: Metadata = {
@@ -16,7 +17,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           attribute="data-mui-color-scheme"
           defaultMode="light"
         />
-        <ThemeRegistry>{children}</ThemeRegistry>
+        <ThemeRegistry>
+          <QueryProvider>{children}</QueryProvider>
+        </ThemeRegistry>
       </body>
     </html>
   );
